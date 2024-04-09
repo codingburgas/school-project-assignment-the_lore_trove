@@ -1,0 +1,19 @@
+﻿  Button.cpp
+  Character.cpp
+  GameManager.cpp
+  main.cpp
+  Manager.cpp
+  Renderer.cpp
+D:\School\Programming\Projects\The_lore_trove\Space Craft\_build\Renderer.cpp(59,16): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\School\Programming\Projects\The_lore_trove\Space Craft\_build\Renderer.cpp(63,24): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\School\Programming\Projects\The_lore_trove\Space Craft\_build\Renderer.cpp(63,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\School\Programming\Projects\The_lore_trove\Space Craft\_build\Renderer.cpp(63,48): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\School\Programming\Projects\The_lore_trove\Space Craft\_build\Renderer.cpp(63,48): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\School\Programming\Projects\The_lore_trove\Space Craft\_build\Renderer.cpp(264,41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\School\Programming\Projects\The_lore_trove\Space Craft\_build\Renderer.cpp(272,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\School\Programming\Projects\The_lore_trove\Space Craft\_build\Renderer.cpp(272,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\School\Programming\Projects\The_lore_trove\Space Craft\_build\Renderer.cpp(412,55): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\School\Programming\Projects\The_lore_trove\Space Craft\_build\Renderer.cpp(412,35): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Trash.cpp
+  Generating Code...
+  game-premake.vcxproj -> D:\School\Programming\Projects\The_lore_trove\Space Craft\_bin\Debug\game-premake.exe
