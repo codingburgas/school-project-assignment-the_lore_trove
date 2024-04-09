@@ -1,12 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "game-premake", "_build\game-premake.vcxproj", "{5197A086-3DFA-2F2B-E67F-68E1D2C1FBAD}"
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "game", "_build\game-premake.vcxproj", "{5197A086-3DFA-2F2B-E67F-68E1D2C1FBAD}"
 	ProjectSection(ProjectDependencies) = postProject
 		{8898EA18-743A-15EF-5DF5-284349369C3F} = {8898EA18-743A-15EF-5DF5-284349369C3F}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "raylib", "_build\raylib.vcxproj", "{8898EA18-743A-15EF-5DF5-284349369C3F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Library", "Library\Library.vcxproj", "{2CFB9D40-E79E-4776-92B6-2E2D0B959960}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,8 +36,19 @@ Global
 		{8898EA18-743A-15EF-5DF5-284349369C3F}.Release|Win32.Build.0 = Release|Win32
 		{8898EA18-743A-15EF-5DF5-284349369C3F}.Release|x64.ActiveCfg = Release|x64
 		{8898EA18-743A-15EF-5DF5-284349369C3F}.Release|x64.Build.0 = Release|x64
+		{2CFB9D40-E79E-4776-92B6-2E2D0B959960}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2CFB9D40-E79E-4776-92B6-2E2D0B959960}.Debug|Win32.Build.0 = Debug|Win32
+		{2CFB9D40-E79E-4776-92B6-2E2D0B959960}.Debug|x64.ActiveCfg = Debug|x64
+		{2CFB9D40-E79E-4776-92B6-2E2D0B959960}.Debug|x64.Build.0 = Debug|x64
+		{2CFB9D40-E79E-4776-92B6-2E2D0B959960}.Release|Win32.ActiveCfg = Release|Win32
+		{2CFB9D40-E79E-4776-92B6-2E2D0B959960}.Release|Win32.Build.0 = Release|Win32
+		{2CFB9D40-E79E-4776-92B6-2E2D0B959960}.Release|x64.ActiveCfg = Release|x64
+		{2CFB9D40-E79E-4776-92B6-2E2D0B959960}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A58E14FC-4E68-4E7B-A858-18CCCB4A6685}
 	EndGlobalSection
 EndGlobal
