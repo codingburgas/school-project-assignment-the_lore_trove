@@ -1,0 +1,28 @@
+﻿  Renderer.cpp
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(19,81): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/Renderer.cpp')
+  
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(19,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/Renderer.cpp')
+  
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(20,81): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/Renderer.cpp')
+  
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(20,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/Renderer.cpp')
+  
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(21,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/Renderer.cpp')
+  
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(21,50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/Renderer.cpp')
+  
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(22,81): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/Renderer.cpp')
+  
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(22,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/Renderer.cpp')
+  
+  Manager.cpp
+  Generating Code...
+  Library.vcxproj -> D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\x64\Debug\Library.lib
