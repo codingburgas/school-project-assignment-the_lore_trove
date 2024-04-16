@@ -20,7 +20,7 @@ public:
 private:
     static Renderer* instance;
 
-    bool shouldWindowClose = false;
+    bool shouldWindowClose = false, menu = true, play = false;
 
-    Texture2D menu;
+    Texture2D menuBackground;
 };
