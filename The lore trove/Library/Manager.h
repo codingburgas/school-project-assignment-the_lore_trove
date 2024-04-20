@@ -1,6 +1,7 @@
 #pragma once
 #include "../raylib-master/src/raylib.h" 
 #include "Renderer.h"
+#include "MathLesson.h"
 #include "window.h"
 
 class Manager {

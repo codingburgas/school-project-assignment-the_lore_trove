@@ -1,32 +1,41 @@
-﻿  Renderer.cpp
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(20,83): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/Renderer.cpp')
+﻿  Manager.cpp
+  MathLesson.cpp
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(18,46): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+  (compiling source file '/MathLesson.cpp')
   
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(20,49): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/Renderer.cpp')
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(18,46): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  (compiling source file '/MathLesson.cpp')
   
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(21,83): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/Renderer.cpp')
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(18,71): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+  (compiling source file '/MathLesson.cpp')
   
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(21,49): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/Renderer.cpp')
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(18,71): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  (compiling source file '/MathLesson.cpp')
   
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(22,86): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/Renderer.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(22,52): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/Renderer.cpp')
-  
+  Renderer.cpp
 D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(23,83): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   (compiling source file '/Renderer.cpp')
   
 D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(23,49): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   (compiling source file '/Renderer.cpp')
   
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(35,98): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(24,83): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   (compiling source file '/Renderer.cpp')
   
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(35,64): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(24,49): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   (compiling source file '/Renderer.cpp')
   
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(25,86): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/Renderer.cpp')
+  
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(25,52): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/Renderer.cpp')
+  
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(26,83): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/Renderer.cpp')
+  
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(26,49): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/Renderer.cpp')
+  
+  Generating Code...
   Library.vcxproj -> D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\x64\Debug\Library.lib

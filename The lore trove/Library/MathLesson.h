@@ -1,10 +1,29 @@
 #pragma once
-using namespace std;
 
-CenterPosition(int Offset = 0, char Axis = 'Y', int OffsetModifier = 0);
+#include "../raylib-master/src/raylib.h" 
 
-void BoardEraser(int& Slide, Color ReplacementColor);
+class Math {
 
-void LoadWhiteBoardSlides(int Order);
+public:
 
-void StartMathLesson();
+	static Math* GetInstance() {
+		if (instance == nullptr) {
+			instance = new Math;
+		}
+		return instance;
+	}
+
+	int CenterPosition(int offset, char axis, int offsetModifier);
+
+	void BoardEraser(Color replacementColor);
+
+	void LoadWhiteBoardSlides();
+
+	void StartMathLesson();
+
+private:
+
+	static Math* instance;
+
+	int currentSlide = 0;
+};

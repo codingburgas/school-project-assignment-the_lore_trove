@@ -18,9 +18,11 @@ public:
     void Update();
 
 private:
+
     static Renderer* instance;
+
+    Texture2D menuBackground;
 
     bool shouldWindowClose = false, menu = true, play = false;
 
-    Texture2D menuBackground;
 };
