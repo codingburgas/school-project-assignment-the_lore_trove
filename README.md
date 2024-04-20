@@ -14,3 +14,22 @@
 # 📖 About the game 
 
 <p>Our team decided to create an online school type of game writen on the C++ programme language. The game contains lessons and some quiestions for the subjects: Maths, Biology and Chemistry. 
+
+# 📥 Installation
+<p><i>These instructions will help you copy and run our project.</i></p>
+
+## 🕹️ Compile from source
+- <p>Prerequisites</p>
+```
+Code Editor(e.g. Visual Studio)
+Git
+```
+
+- <p>Installing<p>
+<p>1. Clone the repo</p>
+
+```
+https://github.com/codingburgas/school-project-assignment-the_lore_trove.git
+```
+<p>2. Open the .sln file</p>
+<p>3. Run the project!</p>
