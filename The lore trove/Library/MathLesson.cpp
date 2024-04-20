@@ -83,8 +83,9 @@ void Math::LoadWhiteBoardSlides(std::string Theme) {
 			DrawRectangle(CenterPosition(1070, 'X'), CenterPosition(635, 'Y'), 1070, 635, WhiteBoardEdgesColor);
 			DrawRectangle(CenterPosition(1050, 'X'), CenterPosition(615, 'Y'), 1050, 615, WhiteBoardColor);
 			DrawText("Rectangles", CenterPosition(1000, 'X'), CenterPosition(575, 'Y'), 30, WhiteBoardTextColor);
-			DrawText("Circumference of a rectangle:P = 2.(a + b)", CenterPosition(975, 'X'), CenterPosition(485, 'Y'), 25, WhiteBoardTextColor);
-			DrawText("Face of a rectangle: S = a.b", CenterPosition(975, 'X'), CenterPosition(400, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("A rectangle has two equal sides.", CenterPosition(975, 'X'), CenterPosition(485, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("Circumference of a rectangle:P = 2.(a + b)", CenterPosition(975, 'X'), CenterPosition(400, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("Face of a rectangle: S = a.b", CenterPosition(975, 'X'), CenterPosition(315, 'Y'), 25, WhiteBoardTextColor);
 			break;
 		}
 	}
