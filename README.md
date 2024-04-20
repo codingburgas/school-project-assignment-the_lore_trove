@@ -1,5 +1,11 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/j7IzDSQi)
 
+
+<div align = "center">
+   <img src = "https://img.shields.io/github/repo-size/codingburgas/school-project-assignment-the_lore_trove?style=for-the-badge&color=blue">
+   <img src = "https://img.shields.io/github/issues-closed/codingburgas/school-project-assignment-the_lore_trove?style=for-the-badge&color=green">
+</div>
+
 # 🏆 The Team
 
 <p><a href="https://github.com/NTIvanova21">Nadezhda Ivanova</a> - Scrum Trainer</p>
