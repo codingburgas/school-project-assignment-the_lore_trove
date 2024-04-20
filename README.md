@@ -61,7 +61,7 @@ https://github.com/codingburgas/school-project-assignment-the_lore_trove.git
 
 ### Used tools for our visual elements:
 <p align="left">
-    <a href="https://www.aseprite.org/"><img src="https://github.com/NTIvanova21/Chemistry-Biology-project---The-Lab-Rats/blob/main/Documentation/Images/asesprite_logo.png" alt="Asesprite logo" width=48px/></a>
+    <a href="https://procreate.com/"><img src="https://github.com/codingburgas/school-project-assignment-the_lore_trove/blob/main/Documentation/Images/Procreate-icon.png" alt="Procreate logo" width=48px/></a>
     
 </p>
 
@@ -69,7 +69,7 @@ https://github.com/codingburgas/school-project-assignment-the_lore_trove.git
 <p align="left">
     <p>
     <img src="https://seeklogo.com/images/C/c-logo-43CE78FF9C-seeklogo.com.png" alt="C++" width=48px>
-    <img src="https://github.com/NTIvanova21/Chemistry-Biology-project---The-Lab-Rats/blob/main/Documentation/Images/Raylib.svg" alt = "Raylib" width = 48px>
+    <img src="https://github.com/codingburgas/school-project-assignment-the_lore_trove/blob/main/Documentation/Images/Raylib.svg" alt = "Raylib" width = 48px>
     </p>
 </p>
 
