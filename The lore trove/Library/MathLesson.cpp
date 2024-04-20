@@ -78,7 +78,15 @@ void Math::LoadWhiteBoardSlides(std::string Theme) {
 		}
 	}
 	else if (Theme == "Rectangles") {
-		DrawRectangle(CenterPosition(200, 'X'), CenterPosition(-100, 'Y'), 200, 100, WhiteBoardTextColor);
+		switch (currentSlide) {
+		case 0:
+			DrawRectangle(CenterPosition(1070, 'X'), CenterPosition(635, 'Y'), 1070, 635, WhiteBoardEdgesColor);
+			DrawRectangle(CenterPosition(1050, 'X'), CenterPosition(615, 'Y'), 1050, 615, WhiteBoardColor);
+			DrawText("Rectangles", CenterPosition(1000, 'X'), CenterPosition(575, 'Y'), 30, WhiteBoardTextColor);
+			DrawText("Circumference of a rectangle:P = 2.(a + b)", CenterPosition(975, 'X'), CenterPosition(485, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("Face of a rectangle: S = a.b", CenterPosition(975, 'X'), CenterPosition(400, 'Y'), 25, WhiteBoardTextColor);
+			break;
+		}
 	}
 	else if (Theme == "Circles") {
 		switch (currentSlide) {
