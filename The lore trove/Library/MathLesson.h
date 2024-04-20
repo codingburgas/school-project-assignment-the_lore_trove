@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../raylib-master/src/raylib.h" 
+#include <string>
 
 class Math {
 
@@ -17,13 +18,19 @@ public:
 
 	void BoardEraser(Color replacementColor);
 
-	void LoadWhiteBoardSlides();
+	void LoadWhiteBoardSlides(std::string theme);
+
+	void PickMathLesson();
 
 	void StartMathLesson();
+
+	bool activeLesson = false;
 
 private:
 
 	static Math* instance;
 
 	int currentSlide = 0;
+
+	std::string lesson;
 };

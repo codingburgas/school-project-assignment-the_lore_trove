@@ -2,6 +2,7 @@
 #include "framework.h"
 
 #include "MathLesson.h"
+#include <string>
 
 Math* Math::instance = nullptr;
 
@@ -32,7 +33,7 @@ void Math::BoardEraser(Color ReplacementColor) {
 	}
 }
 
-void Math::LoadWhiteBoardSlides() {
+void Math::LoadWhiteBoardSlides(std::string Theme) {
 	Color WhiteBoardEdgesColor = Color{ 0, 0, 0, 255 };
 	Color WhiteBoardColor = Color{ 255, 255, 255, 255 };
 	Color WhiteBoardTextColor = Color{ 0, 0, 0, 255 };
@@ -40,41 +41,101 @@ void Math::LoadWhiteBoardSlides() {
 	DrawRectangle(CenterPosition(1070, 'X'), CenterPosition(635, 'Y'), 1070, 635, WhiteBoardEdgesColor);
 	DrawRectangle(CenterPosition(1050, 'X'), CenterPosition(615, 'Y'), 1050, 615, WhiteBoardColor);
 
-	switch (currentSlide) {
-	case 0:
-		DrawRectangle(CenterPosition(1070, 'X'), CenterPosition(635, 'Y'), 1070, 635, WhiteBoardEdgesColor);
-		DrawRectangle(CenterPosition(1050, 'X'), CenterPosition(615, 'Y'), 1050, 615, WhiteBoardColor);
+	if (Theme == "Triangles") {
+		switch (currentSlide) {
+		case 0:
+			DrawRectangle(CenterPosition(1070, 'X'), CenterPosition(635, 'Y'), 1070, 635, WhiteBoardEdgesColor);
+			DrawRectangle(CenterPosition(1050, 'X'), CenterPosition(615, 'Y'), 1050, 615, WhiteBoardColor);
 
-		DrawText("Triangles", CenterPosition(1000, 'X'), CenterPosition(575, 'Y'), 30, WhiteBoardTextColor);
-		DrawText("They have three angles.", CenterPosition(975, 'X'), CenterPosition(400, 'Y'), 25, WhiteBoardTextColor);
-		DrawText("Triangles are shapes that consist of three angles.", CenterPosition(975, 'X'), CenterPosition(485, 'Y'), 25, WhiteBoardTextColor);
-		DrawText("They have three angles.", CenterPosition(975, 'X'), CenterPosition(400, 'Y'), 25, WhiteBoardTextColor);
-		DrawText("They are divided into acute-angled, right-angled and obtuse-angled triangles:", CenterPosition(975, 'X'), CenterPosition(315, 'Y'), 25, WhiteBoardTextColor);
-		break;
+			DrawText("Triangles", CenterPosition(1000, 'X'), CenterPosition(575, 'Y'), 30, WhiteBoardTextColor);
+			DrawText("They have three angles.", CenterPosition(975, 'X'), CenterPosition(400, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("Triangles are shapes that consist of three angles.", CenterPosition(975, 'X'), CenterPosition(485, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("They have three angles.", CenterPosition(975, 'X'), CenterPosition(400, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("They are divided into acute-angled, right-angled and obtuse-angled triangles:", CenterPosition(975, 'X'), CenterPosition(315, 'Y'), 25, WhiteBoardTextColor);
+			break;
 
-	case 1:
-		DrawRectangle(CenterPosition(1070, 'X'), CenterPosition(635, 'Y'), 1070, 635, WhiteBoardEdgesColor);
-		DrawRectangle(CenterPosition(1050, 'X'), CenterPosition(615, 'Y'), 1050, 615, WhiteBoardColor);
-		DrawText("Triangles", CenterPosition(1000, 'X'), CenterPosition(575, 'Y'), 30, WhiteBoardTextColor);
-		DrawText("First sign of equality of triangles: AB = A1B1, AC = A1C1", CenterPosition(975, 'X'), CenterPosition(485, 'Y'), 25, WhiteBoardTextColor);
-		DrawText("Second sign of equality of two triangles:If a side and two angles of one triangle are respectively equal to a side and two angles of another triangle, then the two triangles are congruent.", CenterPosition(975, 'X'), CenterPosition(400, 'Y'), 25, WhiteBoardTextColor);
-		DrawText("Third sign of equality of two triangles:If the sides of one triangle are correspondingly equal to the sides of another triangle, then the two triangles are congruent.", CenterPosition(975, 'X'), CenterPosition(315, 'Y'), 25, WhiteBoardTextColor);
-		DrawText("Fourth sign of congruence of right triangles:If the leg and hypotenuse of a rectangle triangle are respectively equal to leg and hypotenuse of another right triangle, it the two triangles are congruent.", CenterPosition(975, 'X'), CenterPosition(230, 'Y'), 25, WhiteBoardTextColor);
-		break;
+		case 1:
+			DrawRectangle(CenterPosition(1070, 'X'), CenterPosition(635, 'Y'), 1070, 635, WhiteBoardEdgesColor);
+			DrawRectangle(CenterPosition(1050, 'X'), CenterPosition(615, 'Y'), 1050, 615, WhiteBoardColor);
+			
+			DrawText("Triangles", CenterPosition(1000, 'X'), CenterPosition(575, 'Y'), 30, WhiteBoardTextColor);
+			DrawText("First sign of equality of triangles: AB = A1B1, AC = A1C1", CenterPosition(975, 'X'), CenterPosition(485, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("Second sign of equality of two triangles:If a side and two angles of one triangle are respectively equal to a side and two angles of another triangle, then the two triangles are congruent.", CenterPosition(975, 'X'), CenterPosition(400, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("Third sign of equality of two triangles:If the sides of one triangle are correspondingly equal to the sides of another triangle, then the two triangles are congruent.", CenterPosition(975, 'X'), CenterPosition(315, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("Fourth sign of congruence of right triangles:If the leg and hypotenuse of a rectangle triangle are respectively equal to leg and hypotenuse of another right triangle, it the two triangles are congruent.", CenterPosition(975, 'X'), CenterPosition(230, 'Y'), 25, WhiteBoardTextColor);
+			break;
 
-	case 2:
-		DrawRectangle(CenterPosition(1070, 'X'), CenterPosition(635, 'Y'), 1070, 635, WhiteBoardEdgesColor);
-		DrawRectangle(CenterPosition(1050, 'X'), CenterPosition(615, 'Y'), 1050, 615, WhiteBoardColor);
-		DrawText("Triangles", CenterPosition(1000, 'X'), CenterPosition(575, 'Y'), 30, WhiteBoardTextColor);
-		DrawText("Formulas for the perimeter of a triangle: P = a+b+c", CenterPosition(975, 'X'), CenterPosition(485, 'Y'), 25, WhiteBoardTextColor);
-		DrawText("Formulas for the face of a triangle:", CenterPosition(975, 'X'), CenterPosition(400, 'Y'), 25, WhiteBoardTextColor);
-		DrawText("Formulas for the volume of a triangle:", CenterPosition(975, 'X'), CenterPosition(315, 'Y'), 25, WhiteBoardTextColor);
-		break;
+		case 2:
+			DrawRectangle(CenterPosition(1070, 'X'), CenterPosition(635, 'Y'), 1070, 635, WhiteBoardEdgesColor);
+			DrawRectangle(CenterPosition(1050, 'X'), CenterPosition(615, 'Y'), 1050, 615, WhiteBoardColor);
+			
+			DrawText("Triangles", CenterPosition(1000, 'X'), CenterPosition(575, 'Y'), 30, WhiteBoardTextColor);
+			DrawText("Formulas for the perimeter of a triangle: P = a+b+c", CenterPosition(975, 'X'), CenterPosition(485, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("Formulas for the face of a triangle:", CenterPosition(975, 'X'), CenterPosition(400, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("Formulas for the volume of a triangle:", CenterPosition(975, 'X'), CenterPosition(315, 'Y'), 25, WhiteBoardTextColor);
+			break;
+		}
+	}
+	else if (Theme == "Rectangles") {
+		DrawRectangle(CenterPosition(200, 'X'), CenterPosition(-100, 'Y'), 200, 100, WhiteBoardTextColor);
+	}
+	else if (Theme == "Circles") {
+		DrawCircle(CenterPosition(100, 'X'), CenterPosition(100, 'Y'), 100, WhiteBoardTextColor);
+	}
+}
+
+void Math::PickMathLesson() {
+	DrawRectangle(CenterPosition(250, 'X', 300), CenterPosition(-125, 'Y'), 250, 125, BLACK);
+	Rectangle TriButton = { CenterPosition(200, 'X', 300), CenterPosition(-100, 'Y'), 200, 100 };
+	DrawRectangleRec(TriButton, RED);
+	DrawText("Triangles", CenterPosition(200, 'X', 275), CenterPosition(-100, 'Y', - 25), 30, WHITE);
+
+	if (CheckCollisionPointRec(GetMousePosition(), TriButton)) {
+		DrawRectangle(CenterPosition(250, 'X', 300), CenterPosition(-125, 'Y'), 250, 125, MAROON);
+		DrawRectangleRec(TriButton, RED);
+		DrawText("Triangles", CenterPosition(200, 'X', 275), CenterPosition(-100, 'Y', -25), 30, WHITE);
+
+		if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
+			lesson = "Triangles";
+			activeLesson = true;
+		}
+	}
+
+	DrawRectangle(CenterPosition(250, 'X'), CenterPosition(-125, 'Y'), 250, 125, BLACK);
+	Rectangle CirButton = { CenterPosition(200, 'X'), CenterPosition(-100, 'Y'), 200, 100 };
+	DrawRectangleRec(CirButton, GREEN);
+	DrawText("Circles", CenterPosition(200, 'X', -25), CenterPosition(-100, 'Y', -25), 30, WHITE);
+
+	if (CheckCollisionPointRec(GetMousePosition(), CirButton)) {
+		DrawRectangle(CenterPosition(250, 'X'), CenterPosition(-125, 'Y'), 250, 125, DARKGREEN);
+		DrawRectangleRec(CirButton, GREEN);
+		DrawText("Circles", CenterPosition(200, 'X', -25), CenterPosition(-100, 'Y', -25), 30, WHITE);
+
+		if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
+			lesson = "Circles";
+			activeLesson = true;
+		}
+	}
+	
+	DrawRectangle(CenterPosition(250, 'X', -300), CenterPosition(-125, 'Y'), 250, 125, BLACK);
+	Rectangle RecButton = { CenterPosition(200, 'X', -300), CenterPosition(-100, 'Y'), 200, 100 };
+	DrawRectangleRec(RecButton, BLUE);
+	DrawText("Rectangles", CenterPosition(200, 'X', -325), CenterPosition(-100, 'Y', -25), 30, WHITE);
+
+	if (CheckCollisionPointRec(GetMousePosition(), RecButton)) {
+		DrawRectangle(CenterPosition(250, 'X', -300), CenterPosition(-125, 'Y'), 250, 125, DARKBLUE);
+		DrawRectangleRec(RecButton, BLUE);
+		DrawText("Rectangles", CenterPosition(200, 'X', -325), CenterPosition(-100, 'Y', -25), 30, WHITE);
+
+		if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
+			lesson = "Rectangles";
+			activeLesson = true;
+		}
 	}
 }
 
 void Math::StartMathLesson() {
 	
-	LoadWhiteBoardSlides();
+	LoadWhiteBoardSlides(lesson);
 	BoardEraser(BLACK);
 }

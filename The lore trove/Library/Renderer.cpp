@@ -35,7 +35,16 @@ void Renderer::Update() {
 		}
 		else if (play) {
 			ClearBackground(BLACK);
-			Math::GetInstance()->StartMathLesson();
+
+			if (!Math::GetInstance()->activeLesson) {
+				Math::GetInstance()->PickMathLesson();
+			}
+			else {
+				Math::GetInstance()->StartMathLesson();
+			}
+			
+			//Math::GetInstance()->StartMathLesson();
+			
 			//DrawRectangleGradientH(0, 0, screenWidth, screenHeight, BLUE, PURPLE);
 			//DrawText("CARS GO VROOM VROOM", button.mainMenuButtons[2].x + 60, button.mainMenuButtons[2].y - 4, 70, WHITE);
 		}
