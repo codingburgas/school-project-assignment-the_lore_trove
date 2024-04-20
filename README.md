@@ -77,3 +77,5 @@ https://github.com/codingburgas/school-project-assignment-the_lore_trove.git
 </p>
 
 <hr>
+
+## <p align="center">Made with love by The lore trove❤️</p></h2>
