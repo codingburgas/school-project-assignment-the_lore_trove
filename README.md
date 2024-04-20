@@ -10,3 +10,7 @@
 <p><a href="https://github.com/NGKulov22">Nikolay Kulov</a> - Back-end Developer</p>
 
 <hr>
+
+# 📖 About the game 
+
+<p>Our team decided to create an online school type of game writen on the C++ programme language. The game contains lessons and some quiestions for the subjects: Maths, Biology and Chemistry. 
