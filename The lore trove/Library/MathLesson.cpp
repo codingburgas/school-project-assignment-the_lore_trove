@@ -74,13 +74,30 @@ void Math::LoadWhiteBoardSlides(std::string Theme) {
 			DrawText("Formulas for the face of a triangle:", CenterPosition(975, 'X'), CenterPosition(400, 'Y'), 25, WhiteBoardTextColor);
 			DrawText("Formulas for the volume of a triangle:", CenterPosition(975, 'X'), CenterPosition(315, 'Y'), 25, WhiteBoardTextColor);
 			break;
+	
 		}
 	}
 	else if (Theme == "Rectangles") {
 		DrawRectangle(CenterPosition(200, 'X'), CenterPosition(-100, 'Y'), 200, 100, WhiteBoardTextColor);
 	}
 	else if (Theme == "Circles") {
-		DrawCircle(CenterPosition(100, 'X'), CenterPosition(100, 'Y'), 100, WhiteBoardTextColor);
+		switch (currentSlide) {
+		case 0:
+			DrawRectangle(CenterPosition(1070, 'X'), CenterPosition(635, 'Y'), 1070, 635, WhiteBoardEdgesColor);
+			DrawRectangle(CenterPosition(1050, 'X'), CenterPosition(615, 'Y'), 1050, 615, WhiteBoardColor);
+			DrawText("Circle", CenterPosition(1000, 'X'), CenterPosition(575, 'Y'), 30, WhiteBoardTextColor);
+			DrawText("What makes the circle:", CenterPosition(975, 'X'), CenterPosition(485, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("Radius – a segment whose one endpoint is at the center of a circular line and the second endpoint is on the circle itself.", CenterPosition(975, 'X'), CenterPosition(400, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("Chord – a segment whose endpoints lie on a circular line.", CenterPosition(975, 'X'), CenterPosition(315, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("Diameter – a chord that passes through the center of a circular line.", CenterPosition(975, 'X'), CenterPosition(230, 'Y'), 25, WhiteBoardTextColor);
+			break;
+		case 1:
+			DrawRectangle(CenterPosition(1070, 'X'), CenterPosition(635, 'Y'), 1070, 635, WhiteBoardEdgesColor);
+			DrawRectangle(CenterPosition(1050, 'X'), CenterPosition(615, 'Y'), 1050, 615, WhiteBoardColor);
+			DrawText("Circle", CenterPosition(1000, 'X'), CenterPosition(575, 'Y'), 30, WhiteBoardTextColor);
+			DrawText("Formulas for the Diameter = 2.radius (d = 2r)", CenterPosition(975, 'X'), CenterPosition(485, 'Y'), 25, WhiteBoardTextColor);
+			break;
+		}
 	}
 }
 
