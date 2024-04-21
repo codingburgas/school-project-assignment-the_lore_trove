@@ -9,6 +9,7 @@ Manager* Manager::instance = nullptr;
 void Manager::Initizalize() {
 
 	InitWindow(screenWidth, screenHeight, "game");
+	ToggleFullscreen();
 	SetTargetFPS(60);
 	Start();
 }

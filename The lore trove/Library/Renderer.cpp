@@ -18,17 +18,33 @@ void Renderer::Update() {
 
 	BeginDrawing();
 		if (menu) {
-			
-			DrawTexture(menuBackground, 0, 0, WHITE);
-			DrawText("The lore trove", 30, 150, 70, WHITE);
-			DrawText("Play", button.mainMenuButtons[0].x + 60, button.mainMenuButtons[0].y - 4, 70, WHITE);
-			DrawText("Info", button.mainMenuButtons[1].x + 60, button.mainMenuButtons[1].y - 4, 70, WHITE);
-			DrawText("Credits", button.mainMenuButtons[2].x + 60, button.mainMenuButtons[2].y - 4, 70, WHITE);
-			DrawText("Exit", button.mainMenuButtons[3].x + 60, button.mainMenuButtons[3].y - 4, 70, WHITE);
-
+			if (main) {
+				DrawTexture(menuBackground, 0, 0, WHITE);
+				DrawText("The lore trove", 30, 150, 70, WHITE);
+				DrawText("Play", button.mainMenuButtons[0].x + 60, button.mainMenuButtons[0].y - 4, 70, WHITE);
+				DrawText("Info", button.mainMenuButtons[1].x + 60, button.mainMenuButtons[1].y - 4, 70, WHITE);
+				DrawText("Credits", button.mainMenuButtons[2].x + 60, button.mainMenuButtons[2].y - 4, 70, WHITE);
+				DrawText("Exit", button.mainMenuButtons[3].x + 60, button.mainMenuButtons[3].y - 4, 70, WHITE);
+			}
+			else if (info) {
+				ClearBackground(BLACK);
+				DrawRectangleRec({ 10,10,1900,1060 }, BEIGE);
+			}
+			else if (credits) {
+				ClearBackground(BLACK);
+				DrawRectangleRec({ 10,10,1900,1060 }, BEIGE);
+			}
 			if (button.IsClicked(button.mainMenuButtons[0])) {
 				menu = false;
 				chooseSubject = true;
+			}
+			else if (button.IsClicked(button.mainMenuButtons[1])) {
+				info = true;
+				main = false;
+			}
+			else if (button.IsClicked(button.mainMenuButtons[2])) {
+				credits = true;
+				main = false;
 			}
 			else if (button.IsClicked(button.mainMenuButtons[3])) {
 				Manager::GetInstance()->Close();

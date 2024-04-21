@@ -23,7 +23,7 @@ private:
 
     Texture2D menuBackground, subjectChoosingBackground;
 
-    bool shouldWindowClose = false, menu = true, chooseSubject = false;
+    bool shouldWindowClose = false, menu = true, chooseSubject = false, play = false,main = true,info = false, credits = false;
 
     //0-biology, 1-math, 2-chemistry
     int subject;
