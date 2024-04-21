@@ -65,6 +65,13 @@ void Renderer::Update() {
 				ClearBackground(BLACK);
 				DrawRectangleRec({ 10,10,1900,1060 }, BEIGE);
 				DrawTexture(backButton, button.back.x, button.back.y, WHITE);
+				DrawTextEx(font, "Hello, we are The Lore Trove and this is our team:", { 150, 180 }, 80, 5, BLACK);
+				DrawTextEx(font, "Nadezhda Ivanova - 10th grade - Scrum Trainer", { 400, 300 }, 50, 5, BLACK);
+				DrawTextEx(font, "Antonia Taneva - 10th grade - Front-end Developer and Designer", { 250, 375 }, 50, 5, BLACK);
+				DrawTextEx(font, "Valeria Chavdarova - 10th grade - Back-end Developer", { 300, 450 }, 50, 5, BLACK);
+				DrawTextEx(font, "Ivan-Michail Ivanov  - 9th grade - Back-end Developer", { 320, 525 }, 50, 5, BLACK);
+				DrawTextEx(font, "Pavlin Peev - 9th grade - Back-end Developer", { 420, 675 }, 50, 5, BLACK);
+				DrawTextEx(font, "Nikolay Kulov - 9th grade - Back-end Developer", { 400, 600 }, 50, 5, BLACK);
 
 				if (button.IsClicked(button.back)) {
 					credits = false;
