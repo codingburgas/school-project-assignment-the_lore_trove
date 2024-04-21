@@ -14,7 +14,7 @@ public:
 		}
 		return instance;
 	}
-	
+
 	void StartLesson();
 	void PickLesson();
 	void LoadSlide();

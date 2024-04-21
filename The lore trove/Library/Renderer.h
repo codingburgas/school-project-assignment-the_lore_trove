@@ -30,7 +30,7 @@ private:
 
     std::vector<Texture2D> biologyTextures;
 
-    bool shouldWindowClose = false, menu = true, chooseSubject = false, play = false,main = true,info = false, credits = false;
+    bool shouldWindowClose = false, menu = true, chooseSubject = false, play = false, main = true, info = false, credits = false;
 
     //0-biology, 1-math, 2-chemistry
     int subject;
