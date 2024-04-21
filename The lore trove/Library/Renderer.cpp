@@ -15,6 +15,7 @@ void Renderer::LoadTextures() {
 	subjectChoosingBackground = LoadTexture("../assets/chooseSubjectBackground.png");
 	backButton = LoadTexture("../assets/arrow.png");
 	chooseLesson = LoadTexture("../assets/chooseLessonBoard.png");
+	font = LoadFont("../assets/font/Itim-Regular.ttf");
 }
 
 void Renderer::Update() {

@@ -21,6 +21,8 @@ private:
 
     static Renderer* instance;
 
+    Font font;
+
     Texture2D menuBackground, subjectChoosingBackground, backButton, chooseLesson;
 
     bool shouldWindowClose = false, menu = true, chooseSubject = false, play = false,main = true,info = false, credits = false;
