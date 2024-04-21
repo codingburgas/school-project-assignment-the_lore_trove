@@ -14,11 +14,11 @@ public:
         return instance;
     }
 
-    int CenterPosition(int offset, char axis, int offsetModifier = 0);
+    int CenterPosition(int offset, char axis, int offsetModifier = 0); // Calculate center position 
 
-    void LoadTextures();
-    void UnloadTextures();
-    void Update();
+    void LoadTextures(); // Load textures for rendering
+    void UnloadTextures();  // Unload loaded textures 
+    void Update(); // Update rendering and also handle user input
 
 private:
 
@@ -28,7 +28,7 @@ private:
 
     Texture2D menuBackground, subjectChoosingBackground, backButton, chooseLesson;
 
-    std::vector<Texture2D> biologyTextures;
+    std::vector<Texture2D> biologyTextures; // Vector to store biology lesson textures
 
     bool shouldWindowClose = false, menu = true, chooseSubject = false, play = false, main = true, info = false, credits = false;
 

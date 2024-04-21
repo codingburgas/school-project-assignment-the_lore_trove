@@ -10,7 +10,7 @@
 Renderer* Renderer::instance = nullptr;
 Button button;
 
-void Renderer::LoadTextures() {
+void Renderer::LoadTextures() { // Load all the textures from files
 
 	menuBackground = LoadTexture("../assets/mainMenuBackground.png");
 	subjectChoosingBackground = LoadTexture("../assets/chooseSubjectBackground.png");
@@ -29,20 +29,20 @@ void Renderer::LoadTextures() {
 void Renderer::UnloadTextures()
 {
 	for (Texture2D& texture : biologyTextures) {
-		UnloadTexture(texture);
+		UnloadTexture(texture); // Unload textures
 	}
 }
 
 int Renderer::CenterPosition(int offset, char axis, int offsetModifier) {
 	if (axis == 'X') return (GetScreenWidth() / 2) - (offset / 2) - offsetModifier;
 	return ((GetScreenHeight() / 2) - (offset / 2)) - offsetModifier;
-}
+} // Calculate center position based on screen size and object size
 
 void Renderer::Update() {
 
 	BeginDrawing();
 	if (menu) {
-		if (main) {
+		if (main) {  // Render main menu options
 			DrawTexture(menuBackground, 0, 0, WHITE);
 			DrawText("The lore trove", 30, 150, 70, WHITE);
 			DrawText("Play", button.mainMenuButtons[0].x + 60, button.mainMenuButtons[0].y - 4, 70, WHITE);
@@ -50,6 +50,7 @@ void Renderer::Update() {
 			DrawText("Credits", button.mainMenuButtons[2].x + 60, button.mainMenuButtons[2].y - 4, 70, WHITE);
 			DrawText("Exit", button.mainMenuButtons[3].x + 60, button.mainMenuButtons[3].y - 4, 70, WHITE);
 
+			// Check for button clicks
 			if (button.IsClicked(button.mainMenuButtons[0])) {
 				menu = false;
 				chooseSubject = true;
@@ -64,10 +65,10 @@ void Renderer::Update() {
 			}
 			else if (button.IsClicked(button.mainMenuButtons[3])) {
 				Manager::GetInstance()->Close();
-			}
+			} // Close application
 		}
 		else if (info) {
-			ClearBackground(BLACK);
+			ClearBackground(BLACK);  // Render information screen content
 			DrawRectangleRec({ 10,10,1900,1060 }, BEIGE);
 			DrawTexture(backButton, button.back.x, button.back.y, WHITE);
 
@@ -76,7 +77,7 @@ void Renderer::Update() {
 				main = true;
 			}
 		}
-		else if (credits) {
+		else if (credits) { // Shows the info page
 			ClearBackground(BLACK);
 			DrawRectangleRec({ 10,10,1900,1060 }, BEIGE);
 			DrawTexture(backButton, button.back.x, button.back.y, WHITE);
@@ -90,13 +91,13 @@ void Renderer::Update() {
 
 			if (button.IsClicked(button.back)) {
 				credits = false;
-				main = true;
+				main = true; // Makes to go back in the main menu
 			}
 		}
 
 	}
 	else {
-		if (chooseSubject) {
+		if (chooseSubject) { // Shows different options of different subject chosen
 			ClearBackground(WHITE);
 			DrawTexture(subjectChoosingBackground, 0, 0, WHITE);
 			if (button.IsClicked(button.subjects[0])) {
@@ -111,10 +112,11 @@ void Renderer::Update() {
 				subject = 2;
 				chooseSubject = false;
 			}
+
 		}
 		else {
 			ClearBackground(WHITE);
-			if (subject == 0) {
+			if (subject == 0) { // Runs if subject == 0
 				Biology::GetInstance()->setTextures(biologyTextures);
 				DrawTexture(chooseLesson, 0, 0, WHITE);
 				DrawTexture(backButton, button.back.x, button.back.y, WHITE);
@@ -125,7 +127,7 @@ void Renderer::Update() {
 				Biology::GetInstance()->LoadSlide();
 
 			}
-			else if (subject == 1) {
+			else if (subject == 1) { // Runs if subject == 1
 				DrawTexture(chooseLesson, 0, 0, WHITE);
 				DrawTexture(backButton, button.back.x, button.back.y, WHITE);
 
@@ -140,7 +142,7 @@ void Renderer::Update() {
 					Math::GetInstance()->StartMathLesson();
 				}
 			}
-			else if (subject == 2) {
+			else if (subject == 2) { // Runs if subject == 2
 				DrawTexture(chooseLesson, 0, 0, WHITE);
 				DrawTexture(backButton, button.back.x, button.back.y, WHITE);
 

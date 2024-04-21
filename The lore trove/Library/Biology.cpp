@@ -8,8 +8,8 @@
 Biology* Biology::instance = nullptr;
 
 void DrawButton(Rectangle rect, const char* text, Color idleColor, Color hoverColor, Color textColor) {
-    bool isHovered = CheckCollisionPointRec(GetMousePosition(), rect);
-
+    bool isHovered = CheckCollisionPointRec(GetMousePosition(), rect); // Check if the mouse cursor is hovering over the button
+    // Draw button according to hover state
     if (isHovered) {
         DrawRectangleRec(rect, hoverColor);
     }
@@ -17,18 +17,20 @@ void DrawButton(Rectangle rect, const char* text, Color idleColor, Color hoverCo
         DrawRectangleRec(rect, idleColor);
     }
 
-    DrawText(text, rect.x + 40, rect.y + 20, 30, textColor);
+    DrawText(text, rect.x + 40, rect.y + 20, 30, textColor); // Draw button text
+
 }
 
-
+// Function to start a biology lesson
 void Biology::StartLesson()
 {
 
-  
+    // Draw common board elements
     DrawTexture(_textures[3], 0, 0, WHITE);
     DrawRectangle(BOARDX, BOARDY, BOARD_WIDTH, BOARD_HEIGHT, WHITE_BOARD_MARGIN_COLOR);
     DrawRectangle(BOARDX + BORDER, BOARDY + BORDER, BOARD_WIDTH - (BORDER * 2), BOARD_HEIGHT - (BORDER * 2), WHITE_BOARD_COLOR);
 
+    // Draw lesson specific content for the first icon
     if (lesson == 1) {
         switch (currentSlide) {
         case 1:
@@ -60,14 +62,14 @@ void Biology::StartLesson()
             break;
         }
     }
-    else if (lesson == 2) {
+    else if (lesson == 2) {  // Draw lesson specific content for the second icon
         switch (currentSlide) {
         case 1:
         {
             DrawTexture(_textures[5], BOARDX + 5, BOARDY + 25, WHITE);
             DrawText("Eukaryotic Cell", BOARDX + (BOARD_WIDTH / 2) - 460 + 545, BOARDY + 25, 35, WHITE_BOARD_TEXT_COLOR);
             DrawText("Eukaryote, any cell or", BOARDX + (BOARD_WIDTH / 2) - 460 + 470, BOARDY + 90, 35, WHITE_BOARD_TEXT_COLOR);
-            DrawText("organism that possesses a", BOARDX + (BOARD_WIDTH / 2) - 460  + 470, BOARDY + 125, 35, WHITE_BOARD_TEXT_COLOR);
+            DrawText("organism that possesses a", BOARDX + (BOARD_WIDTH / 2) - 460 + 470, BOARDY + 125, 35, WHITE_BOARD_TEXT_COLOR);
             DrawText("clearly defined nucleus.", BOARDX + (BOARD_WIDTH / 2) - 460 + 470, BOARDY + 160, 35, WHITE_BOARD_TEXT_COLOR);
             DrawText("The eukaryotic cell has a ", BOARDX + (BOARD_WIDTH / 2) - 460 + 470, BOARDY + 205, 35, WHITE_BOARD_TEXT_COLOR);
             DrawText("nuclear membrane that  ", BOARDX + (BOARD_WIDTH / 2) - 460 + 470, BOARDY + 245, 35, WHITE_BOARD_TEXT_COLOR);
@@ -95,21 +97,21 @@ void Biology::StartLesson()
             DrawText("Prokaryotic Cell", BOARDX + (BOARD_WIDTH / 2) - 365, BOARDY + 55, 35, WHITE_BOARD_TEXT_COLOR);
             DrawText("Prokaryotic cells are", BOARDX + (BOARD_WIDTH / 2) + 10, BOARDY + 50, 35, WHITE_BOARD_TEXT_COLOR);
             DrawText("single-celled microorganisms", BOARDX + (BOARD_WIDTH / 2) + 10, BOARDY + 85, 35, WHITE_BOARD_TEXT_COLOR);
-            DrawText("that include Bacteria and", BOARDX + (BOARD_WIDTH / 2) +10, BOARDY + 125, 35, WHITE_BOARD_TEXT_COLOR);
+            DrawText("that include Bacteria and", BOARDX + (BOARD_WIDTH / 2) + 10, BOARDY + 125, 35, WHITE_BOARD_TEXT_COLOR);
             DrawText("Archaea. A prokaryotic cell ", BOARDX + (BOARD_WIDTH / 2) + 10, BOARDY + 170, 35, WHITE_BOARD_TEXT_COLOR);
             DrawText("does not have a", BOARDX + (BOARD_WIDTH / 2) + 140, BOARDY + 205, 35, WHITE_BOARD_TEXT_COLOR);
-            DrawText("nuclear membrane. ", BOARDX + (BOARD_WIDTH / 2) + 140 , BOARDY + 240, 35, WHITE_BOARD_TEXT_COLOR);
+            DrawText("nuclear membrane. ", BOARDX + (BOARD_WIDTH / 2) + 140, BOARDY + 240, 35, WHITE_BOARD_TEXT_COLOR);
             DrawText("A prokaryotic cell", BOARDX + (BOARD_WIDTH / 2) + 140, BOARDY + 280, 35, WHITE_BOARD_TEXT_COLOR);
             DrawText("lacks, organelles", BOARDX + (BOARD_WIDTH / 2) + 140, BOARDY + 320, 35, WHITE_BOARD_TEXT_COLOR);
             DrawText("like: mitochondria, ", BOARDX + (BOARD_WIDTH / 2) + 140, BOARDY + 360, 35, WHITE_BOARD_TEXT_COLOR);
-            DrawText("endoplasmic, and ", BOARDX + (BOARD_WIDTH / 2)  + 140, BOARDY + 400, 35, WHITE_BOARD_TEXT_COLOR);
+            DrawText("endoplasmic, and ", BOARDX + (BOARD_WIDTH / 2) + 140, BOARDY + 400, 35, WHITE_BOARD_TEXT_COLOR);
             DrawText("Golgi apparatus", BOARDX + (BOARD_WIDTH / 2) + 140, BOARDY + 440, 35, WHITE_BOARD_TEXT_COLOR);
 
             DrawButton(NEXT_BUTTON, "Next", BLUE, SKYBLUE, WHITE);
             break;
         case 4:
             DrawText("Question 2:", BOARDX + (BOARD_WIDTH / 2) - 460, BOARDY + 105, 40, WHITE_BOARD_TEXT_COLOR);
-            DrawText("What does not have a prokaryotic cell?", BOARDX + (BOARD_WIDTH / 2) -  470, BOARDY + 195, 35, WHITE_BOARD_TEXT_COLOR);
+            DrawText("What does not have a prokaryotic cell?", BOARDX + (BOARD_WIDTH / 2) - 470, BOARDY + 195, 35, WHITE_BOARD_TEXT_COLOR);
             DrawButton(BUTTON_A, "A.  Nucleur Membrane", BLUE, SKYBLUE, WHITE);
             DrawButton(BUTTON_B, "B. Mitochondria", BLUE, SKYBLUE, WHITE);
             DrawButton(BUTTON_C, "C. Lysosomes", BLUE, SKYBLUE, WHITE);
@@ -123,16 +125,16 @@ void Biology::StartLesson()
 
 }
 
-void Biology::LoadSlide()
+void Biology::LoadSlide() // Function to load a specific slide
 {
     Rectangle lessonButton1 = { 300, screenHeight / 5, 613, 790 };
     Rectangle lessonButton2 = { screenWidth / 2, screenHeight / 5, 611, 812 };
     if (!lesson) {
-        
-        DrawTexture(_textures[1], 300, screenHeight / 5, WHITE);
-        DrawTexture(_textures[2], screenWidth / 2, screenHeight / 5, WHITE);
 
-        if (CheckButtonClicked(lessonButton1)) {
+        DrawTexture(_textures[1], 300, screenHeight / 5, WHITE);
+        DrawTexture(_textures[2], screenWidth / 2, screenHeight / 5, WHITE); // Draw buttons for selecting lessons
+
+        if (CheckButtonClicked(lessonButton1)) {  // Check if lesson buttons are clicked
             lesson = 1;
             currentSlide = 1;
         }
@@ -142,9 +144,10 @@ void Biology::LoadSlide()
         }
     }
     else {
-        Rectangle nextButton = NEXT_BUTTON;
+        Rectangle nextButton = NEXT_BUTTON; // Check which button should be displayed based on lesson and slide
 
-        if (lesson == 1) {
+
+        if (lesson == 1) { // Update next button for lesson 1
             switch (currentSlide)
             {
             case 1:
@@ -161,7 +164,7 @@ void Biology::LoadSlide()
                 break;
             }
         }
-        if (lesson == 2) {
+        if (lesson == 2) { // Update next button for lesson 2
             switch (currentSlide)
             {
             case 1:
@@ -183,15 +186,15 @@ void Biology::LoadSlide()
         }
 
 
-        if (CheckButtonClicked(nextButton)) {
+        if (CheckButtonClicked(nextButton)) { // Check if nextButton is clicked
 
-            if ((lesson == 1 && currentSlide == 4) || (lesson == 2 && currentSlide == 5))
+            if ((lesson == 1 && currentSlide == 4) || (lesson == 2 && currentSlide == 5)) // Check if last slide of lesson is reached
             {
                 currentSlide = 1;
                 lesson = 0;
 
             }
-            currentSlide++;
+            currentSlide++; // Move to next slide
         }
 
 
