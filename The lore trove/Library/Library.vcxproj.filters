@@ -39,6 +39,9 @@
     <ClInclude Include="Biology.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ChemistryLesson.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -57,6 +60,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Biology.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChemistryLesson.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

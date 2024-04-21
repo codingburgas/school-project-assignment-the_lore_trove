@@ -1,8 +1,8 @@
 #include "pch.h"
 #include "framework.h"
-
 #include "Renderer.h"
 #include "MathLesson.h"
+#include "ChemistryLesson.h"
 #include "Manager.h"
 #include "Biology.h"
 
@@ -17,6 +17,7 @@ void Renderer::LoadTextures() { // Load all the textures from files
 	backButton = LoadTexture("../assets/arrow.png");
 	chooseLesson = LoadTexture("../assets/chooseLessonBoard.png");
 	font = LoadFont("../assets/font/Itim-Regular.ttf");
+	
 	biologyTextures.push_back(LoadTexture("../assets/chooseLessonBoard.png"));
 	biologyTextures.push_back(LoadTexture("../assets/biologyLessonIcon1.png"));
 	biologyTextures.push_back(LoadTexture("../assets/biologyLessonIcon2.png"));
@@ -24,6 +25,8 @@ void Renderer::LoadTextures() { // Load all the textures from files
 	biologyTextures.push_back(LoadTexture("../assets/eucell.png"));
 	biologyTextures.push_back(LoadTexture("../assets/eukaryoticCell.png"));
 	biologyTextures.push_back(LoadTexture("../assets/prokaryote.png"));
+
+	chooseChemistry = LoadTexture("../assets/chemistryLessonIcons.png");
 }
 
 void Renderer::UnloadTextures()
@@ -148,6 +151,13 @@ void Renderer::Update() {
 
 				if (button.IsClicked(button.back)) {
 					chooseSubject = true;
+				}
+
+				if (!Chemistry::GetInstance()->activeChemistryLesson) {
+					Chemistry::GetInstance()->PickChemistryLesson();
+				}
+				else {
+					Chemistry::GetInstance()->StartChemistryLesson();
 				}
 			}
 		}

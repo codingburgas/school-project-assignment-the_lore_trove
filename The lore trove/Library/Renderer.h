@@ -20,6 +20,8 @@ public:
     void UnloadTextures();  // Unload loaded textures 
     void Update(); // Update rendering and also handle user input
 
+    Texture2D chooseChemistry;
+
 private:
 
     static Renderer* instance;
