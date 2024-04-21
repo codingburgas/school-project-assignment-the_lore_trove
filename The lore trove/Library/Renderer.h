@@ -25,4 +25,7 @@ private:
 
     bool shouldWindowClose = false, menu = true, chooseSubject = false;
 
+    //0-biology, 1-math, 2-chemistry
+    int subject;
+
 };

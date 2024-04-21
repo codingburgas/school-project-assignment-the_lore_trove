@@ -38,14 +38,29 @@ void Renderer::Update() {
 			if (chooseSubject) {
 				ClearBackground(WHITE);
 				DrawTexture(subjectChoosingBackground, 0, 0, WHITE);
-			}
-			
-
-			if (!Math::GetInstance()->activeLesson) {
-				Math::GetInstance()->PickMathLesson();
+				if (button.IsClicked(button.subjects[0])) {
+					subject = 0;
+					chooseSubject = false;
+				}
+				else if (button.IsClicked(button.subjects[1])) {
+					subject = 1;
+					chooseSubject = false;
+				}
+				else if (button.IsClicked(button.subjects[2])) {
+					subject = 2;
+					chooseSubject = false;
+				}
 			}
 			else {
-				Math::GetInstance()->StartMathLesson();
+				ClearBackground(WHITE);
+				if (subject == 1) {
+					if (!Math::GetInstance()->activeLesson) {
+						Math::GetInstance()->PickMathLesson();
+					}
+					else {
+						Math::GetInstance()->StartMathLesson();
+					}
+				}
 			}
 		}
 
