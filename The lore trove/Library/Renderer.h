@@ -13,6 +13,8 @@ public:
         return instance;
     }
 
+    int CenterPosition(int offset, char axis, int offsetModifier = 0);
+
     void LoadTextures();
 
     void Update();

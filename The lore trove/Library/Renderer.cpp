@@ -18,6 +18,11 @@ void Renderer::LoadTextures() {
 	font = LoadFont("../assets/font/Itim-Regular.ttf");
 }
 
+int Renderer::CenterPosition(int offset, char axis, int offsetModifier) {
+	if (axis == 'X') return (GetScreenWidth() / 2) - (offset / 2) - offsetModifier;
+	return ((GetScreenHeight() / 2) - (offset / 2)) - offsetModifier;
+}
+
 void Renderer::Update() {
 
 	BeginDrawing();

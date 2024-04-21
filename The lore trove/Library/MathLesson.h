@@ -1,6 +1,7 @@
 #pragma once
 
-#include "../raylib-master/src/raylib.h" 
+#include "../raylib-master/src/raylib.h"
+#include "Renderer.h"
 #include <string>
 
 class Math {
@@ -13,8 +14,6 @@ public:
 		}
 		return instance;
 	}
-
-	int CenterPosition(int offset, char axis, int offsetModifier);
 
 	void BoardEraser(Color replacementColor);
 
