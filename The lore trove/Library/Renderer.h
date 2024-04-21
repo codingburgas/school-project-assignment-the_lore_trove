@@ -2,6 +2,7 @@
 #include "../raylib-master/src/raylib.h" 
 #include "Button.h"
 #include "window.h"
+#include <vector>
 
 class Renderer {
 public:
@@ -26,6 +27,8 @@ private:
     Font font;
 
     Texture2D menuBackground, subjectChoosingBackground, backButton, chooseLesson;
+
+    std::vector<Texture2D> biologyTextures;
 
     bool shouldWindowClose = false, menu = true, chooseSubject = false, play = false,main = true,info = false, credits = false;
 

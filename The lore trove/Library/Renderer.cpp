@@ -4,6 +4,7 @@
 #include "Renderer.h"
 #include "MathLesson.h"
 #include "Manager.h"
+#include "Biology.h"
 
 
 Renderer* Renderer::instance = nullptr;
@@ -16,6 +17,10 @@ void Renderer::LoadTextures() {
 	backButton = LoadTexture("../assets/arrow.png");
 	chooseLesson = LoadTexture("../assets/chooseLessonBoard.png");
 	font = LoadFont("../assets/font/Itim-Regular.ttf");
+	biologyTextures.push_back(LoadTexture("../assets/chooseLessonBoard.png"));
+	biologyTextures.push_back(LoadTexture("../assets/biologyLessonIcon1.png"));
+	biologyTextures.push_back(LoadTexture("../assets/biologyLessonIcon2.png"));
+	biologyTextures.push_back(LoadTexture("../assets/cell.png"));
 }
 
 int Renderer::CenterPosition(int offset, char axis, int offsetModifier) {
@@ -100,12 +105,14 @@ void Renderer::Update() {
 			else {
 				ClearBackground(WHITE);
 				if (subject == 0) {
-					DrawTexture(chooseLesson, 0, 0, WHITE);
+					Biology::GetInstance()->setTextures(biologyTextures);
+					//DrawTexture(chooseLesson, 0, 0, WHITE);
 					DrawTexture(backButton, button.back.x, button.back.y, WHITE);
 
 					if (button.IsClicked(button.back)) {
 						chooseSubject = true;
 					}
+					Biology::GetInstance()->LoadSlide();
 					
 				}
 				else if (subject == 1) {

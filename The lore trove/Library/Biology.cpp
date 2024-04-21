@@ -1,0 +1,158 @@
+#include "pch.h"
+#include "framework.h"
+#include "window.h"
+#include "Biology.h"
+#include <string>
+
+Biology* Biology::instance = nullptr;
+
+void DrawButton(Rectangle rect, const char* text, Color idleColor, Color hoverColor, Color textColor) {
+    bool isHovered = CheckCollisionPointRec(GetMousePosition(), rect);
+
+    if (isHovered) {
+        DrawRectangleRec(rect, hoverColor);
+    }
+    else {
+        DrawRectangleRec(rect, idleColor);
+    }
+
+    DrawText(text, rect.x + 40, rect.y + 20, 30, textColor);
+}
+void LoadSlide(int Order, int& currentSlide, Rectangle ButtonA, Rectangle ButtonB, Rectangle ButtonC) {
+
+    int titleWidth = MeasureText(TITLE, 40);
+    DrawRectangle(BOARDX, BOARDY, BOARD_WIDTH, BOARD_HEIGHT, WHITE_BOARD_MARGIN_COLOR);
+    DrawRectangle(BOARDX + BORDER, BOARDY + BORDER, BOARD_WIDTH - (BORDER * 2), BOARD_HEIGHT - (BORDER * 2), WHITE_BOARD_COLOR);
+
+    switch (Order) {
+    case 0: {
+        DrawText(TITLE, BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2, BOARDY + 155, 40, BLACK);
+        DrawButton(ButtonA, "Start", BLUE, SKYBLUE, WHITE);
+
+        break;
+    }
+    case 1:
+    {
+        DrawText("The cell is the smallest unit that can live on its own and that makes up all ", BOARDX + (BOARD_WIDTH / 2) - 470, BOARDY + 400, 25, WHITE_BOARD_TEXT_COLOR);
+        DrawText("living organisms and the issues of the body. A cell has three main parts: ", BOARDX + (BOARD_WIDTH / 2) - 470, BOARDY + 440, 25, WHITE_BOARD_TEXT_COLOR);
+        DrawText("The cell membrane, The nucleus, and The cytoplasm. The powerhouse of", BOARDX + (BOARD_WIDTH / 2) - 470, BOARDY + 480, 25, WHITE_BOARD_TEXT_COLOR);
+        DrawText("the cell is Mitohondria.", BOARDX + (BOARD_WIDTH / 2) - 125, BOARDY + 525, 25, WHITE_BOARD_TEXT_COLOR);
+        DrawButton(ButtonA, "Next", BLUE, SKYBLUE, WHITE);
+
+        break;
+    }
+
+    case 2: {
+        DrawText("Question 1:", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2, BOARDY + 105, 40, WHITE_BOARD_TEXT_COLOR);
+        DrawText("Which of the following is from the main part of the cell?", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 - 10, BOARDY + 195, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawButton(ButtonA, "A. Mitohandria", BLUE, SKYBLUE, WHITE);
+        DrawButton(ButtonB, "B. The Nucleus", BLUE, SKYBLUE, WHITE);
+        DrawButton(ButtonC, "C. Membrane Receptor ", BLUE, SKYBLUE, WHITE);
+        break;
+    }
+    case 3: {
+        DrawText("Question 2:", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2, BOARDY + 105, 40, WHITE_BOARD_TEXT_COLOR);
+        DrawText("What is the powerhouse of the cell?", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 - 10, BOARDY + 195, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawButton(ButtonA, "A. Mitochondria", BLUE, SKYBLUE, WHITE);
+        DrawButton(ButtonB, "B. Nucleus", BLUE, SKYBLUE, WHITE);
+        DrawButton(ButtonC, "C. Golgi Apparatus", BLUE, SKYBLUE, WHITE);
+        break;
+
+
+    }
+    case 4:
+    {
+        DrawText("Eukaryotic Cell", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 545, BOARDY + 25, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("Eukaryote, any cell or", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 470, BOARDY + 90, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("organism that possesses a", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 470, BOARDY + 125, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("clearly defined nucleus.", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 470, BOARDY + 160, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("The eukaryotic cell has a ", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 470, BOARDY + 205, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("nuclear membrane that  ", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 470, BOARDY + 245, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("surrounds the nucleus,  ", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 470, BOARDY + 280, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("in which the well-defined   ", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 470, BOARDY + 315, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("chromosomes are located.  ", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 470, BOARDY + 355, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("Eukaryotic cells also,", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 470, BOARDY + 395, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("contain mitochondria, a", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 470, BOARDY + 435, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("Golgi apparatus,lysosomes ", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 470, BOARDY + 475, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("etc. ", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 470, BOARDY + 505, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawButton(ButtonA, "Next", BLUE, SKYBLUE, WHITE);
+
+        break;
+    }
+    case 5: {
+        DrawText("Question 3:", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2, BOARDY + 105, 40, WHITE_BOARD_TEXT_COLOR);
+        DrawText("Which of the these surrounds the nucleur?", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 - 10, BOARDY + 195, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawButton(ButtonA, "A. Golgi apparatus", BLUE, SKYBLUE, WHITE);
+        DrawButton(ButtonB, "B. Lysosomes", BLUE, SKYBLUE, WHITE);
+        DrawButton(ButtonC, "C. Nucleur Membrane ", BLUE, SKYBLUE, WHITE);
+        break;
+    }
+    case 6:
+        DrawText("Prokaryotic Cell", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 95, BOARDY + 55, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("Prokaryotic cells are", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 470, BOARDY + 50, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("single-celled microorganisms", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 470, BOARDY + 85, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("that include Bacteria and", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 470, BOARDY + 125, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("Archaea. A prokaryotic cell ", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 470, BOARDY + 170, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("does not have a", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 600, BOARDY + 205, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("nuclear membrane. ", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 600, BOARDY + 240, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("A prokaryotic cell", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 600, BOARDY + 280, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("lacks, organelles", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 600, BOARDY + 320, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("like: mitochondria, ", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 600, BOARDY + 360, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("endoplasmic, and ", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 600, BOARDY + 400, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawText("Golgi apparatus", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 + 600, BOARDY + 440, 35, WHITE_BOARD_TEXT_COLOR);
+
+        DrawButton(ButtonA, "Next", BLUE, SKYBLUE, WHITE);
+        break;
+    case 7:
+        DrawText("Question 3:", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2, BOARDY + 105, 40, WHITE_BOARD_TEXT_COLOR);
+        DrawText("What does not have a prokaryotic cell?", BOARDX + (BOARD_WIDTH / 2) - titleWidth / 2 - 10, BOARDY + 195, 35, WHITE_BOARD_TEXT_COLOR);
+        DrawButton(ButtonA, "A.  Nucleur Membrane", BLUE, SKYBLUE, WHITE);
+        DrawButton(ButtonB, "B. Mitochondria", BLUE, SKYBLUE, WHITE);
+        DrawButton(ButtonC, "C. Lysosomes", BLUE, SKYBLUE, WHITE);
+        break;
+    }
+}
+
+bool CheckButtonClicked(Rectangle buttonRect) {
+    return CheckCollisionPointRec(GetMousePosition(), buttonRect) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON);
+}
+
+void Biology::StartLesson()
+{
+}
+
+void Biology::PickLesson()
+{
+}
+
+void Biology::LoadSlide()
+{
+    Rectangle lessonButton1 = { 300, screenHeight / 5, 613, 790 };
+    Rectangle lessonButton2 = { screenWidth / 2, screenHeight / 5, 611, 812 };
+    if (!lesson) {
+        DrawTexture(_textures[0], 0, 0, WHITE);
+        DrawTexture(_textures[1], 300, screenHeight / 5, WHITE);
+        DrawTexture(_textures[2], screenWidth / 2, screenHeight / 5, WHITE);
+
+        if (CheckButtonClicked(lessonButton1)) {
+            lesson = 1;
+        }
+        else if (CheckButtonClicked(lessonButton2)) {
+            lesson = 2;
+        }
+    }
+    else {
+        DrawTexture(_textures[3], 0, 0, WHITE);
+    }
+
+}
+
+bool Biology::CheckButtonClicked(Rectangle buttonRect)
+{
+    return CheckCollisionPointRec(GetMousePosition(), buttonRect) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON);
+}
+
+void Biology::setTextures(vector<Texture2D> textures)
+{
+    _textures = textures;
+}

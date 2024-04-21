@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Biology.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="MathLesson.h" />
@@ -148,6 +149,7 @@
     <ClInclude Include="window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Biology.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="MathLesson.cpp" />
     <ClCompile Include="Renderer.cpp" />
