@@ -19,7 +19,8 @@ void DrawButton(Rectangle rect, const char* text, Color idleColor, Color hoverCo
     DrawText(text, rect.x + 40, rect.y + 20, 30, textColor);
 }
 void LoadSlide(int Order, int& currentSlide, Rectangle ButtonA, Rectangle ButtonB, Rectangle ButtonC) {
-
+    
+    Font font = LoadFont("../assets/font/Itim-Regular.ttf");
     int titleWidth = MeasureText(TITLE, 40);
     DrawRectangle(BOARDX, BOARDY, BOARD_WIDTH, BOARD_HEIGHT, WHITE_BOARD_MARGIN_COLOR);
     DrawRectangle(BOARDX + BORDER, BOARDY + BORDER, BOARD_WIDTH - (BORDER * 2), BOARD_HEIGHT - (BORDER * 2), WHITE_BOARD_COLOR);
@@ -33,10 +34,10 @@ void LoadSlide(int Order, int& currentSlide, Rectangle ButtonA, Rectangle Button
     }
     case 1:
     {
-        DrawText("The cell is the smallest unit that can live on its own and that makes up all ", BOARDX + (BOARD_WIDTH / 2) - 470, BOARDY + 400, 25, WHITE_BOARD_TEXT_COLOR);
-        DrawText("living organisms and the issues of the body. A cell has three main parts: ", BOARDX + (BOARD_WIDTH / 2) - 470, BOARDY + 440, 25, WHITE_BOARD_TEXT_COLOR);
-        DrawText("The cell membrane, The nucleus, and The cytoplasm. The powerhouse of", BOARDX + (BOARD_WIDTH / 2) - 470, BOARDY + 480, 25, WHITE_BOARD_TEXT_COLOR);
-        DrawText("the cell is Mitohondria.", BOARDX + (BOARD_WIDTH / 2) - 125, BOARDY + 525, 25, WHITE_BOARD_TEXT_COLOR);
+        DrawTextEx(font, "The cell is the smallest unit that can live on its own and that makes up all ", { BOARDX + (BOARD_WIDTH / 2) - 470, BOARDY + 400 }, 25, 10, WHITE_BOARD_TEXT_COLOR);
+        DrawTextEx(font, "living organisms and the issues of the body. A cell has three main parts: ", { BOARDX + (BOARD_WIDTH / 2) - 470, BOARDY + 440 }, 25, 10, WHITE_BOARD_TEXT_COLOR);
+        DrawTextEx(font, "The cell membrane, The nucleus, and The cytoplasm. The powerhouse of", { BOARDX + (BOARD_WIDTH / 2) - 470, BOARDY + 480 }, 25, 10, WHITE_BOARD_TEXT_COLOR);
+        DrawTextEx(font, "the cell is Mitohondria.", { BOARDX + (BOARD_WIDTH / 2) - 125, BOARDY + 525 }, 25, 10, WHITE_BOARD_TEXT_COLOR);
         DrawButton(ButtonA, "Next", BLUE, SKYBLUE, WHITE);
 
         break;
