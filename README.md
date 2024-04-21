@@ -22,7 +22,7 @@
 
 # 📖 About the game 
 
-<p>Our team decided to create an online school type of game writen on the C++ programme language. The game contains lessons and some quiestions for the subjects: Maths, Biology and Chemistry. 
+<p>Our team decided to create an online school type of game writen on the C++ programme language. The game contains visual lessons for the subjects: Maths, Biology and Chemistry. 
 
 # 📥 Installation
 <p><i>These instructions will help you copy and run our project.</i></p>
@@ -46,9 +46,9 @@ https://github.com/codingburgas/school-project-assignment-the_lore_trove.git
 
 
 # 📄 Documentation
-### ➤ <a href="#">Documentation</a><img src="https://cdn.worldvectorlogo.com/logos/word-1.svg" alt="Word" width="30" height="20"/> 
-### ➤ <a href="#">Presentation </a><img src="https://cdn.worldvectorlogo.com/logos/powerpoint-2.svg" alt="PowerPoint" width="30" height="20"/>
-### ➤ <a href="#">QA documentation </a><img src="https://cdn.worldvectorlogo.com/logos/excel-4.svg" alt="Excel" width="30" height="20"/>
+### ➤ <a href="https://minedusci-my.sharepoint.com/:w:/g/personal/ni01798012_edu_mon_bg/EYjpXn4-zFtEviBISkasRdUBvW3Nb1rKZCfeiskfN-pilw?e=vg7s12">Documentation</a><img src="https://cdn.worldvectorlogo.com/logos/word-1.svg" alt="Word" width="30" height="20"/> 
+### ➤ <a href="https://minedusci-my.sharepoint.com/:p:/g/personal/ni01798012_edu_mon_bg/Ean3ifuxf5JOkAFc3Yc_WDABEZ4ZUmXhEQ8UKEdLMDhO4g?e=Jj4nBo">Presentation </a><img src="https://cdn.worldvectorlogo.com/logos/powerpoint-2.svg" alt="PowerPoint" width="30" height="20"/>
+### ➤ <a href="https://minedusci-my.sharepoint.com/:x:/g/personal/ni01798012_edu_mon_bg/EYp2a8dZqgtHqI16OFZAVyUB7v_rb2XMEvSswbsEh0SSsQ?e=w2zfmy">QA documentation </a><img src="https://cdn.worldvectorlogo.com/logos/excel-4.svg" alt="Excel" width="30" height="20"/>
 
 
 
