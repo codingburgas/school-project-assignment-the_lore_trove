@@ -11,6 +11,7 @@ Button button;
 
 void Renderer::LoadTextures() {
 	menuBackground = LoadTexture("../assets/mainMenuBackground.png");
+	subjectChoosingBackground = LoadTexture("../assets/chooseSubjectBackground.png");
 }
 
 void Renderer::Update() {
@@ -27,14 +28,18 @@ void Renderer::Update() {
 
 			if (button.IsClicked(button.mainMenuButtons[0])) {
 				menu = false;
-				play = true;
+				chooseSubject = true;
 			}
 			else if (button.IsClicked(button.mainMenuButtons[3])) {
 				Manager::GetInstance()->Close();
 			}
 		}
-		else if (play) {
-			ClearBackground(BLACK);
+		else {
+			if (chooseSubject) {
+				ClearBackground(WHITE);
+				DrawTexture(subjectChoosingBackground, 0, 0, WHITE);
+			}
+			
 
 			if (!Math::GetInstance()->activeLesson) {
 				Math::GetInstance()->PickMathLesson();
@@ -42,15 +47,7 @@ void Renderer::Update() {
 			else {
 				Math::GetInstance()->StartMathLesson();
 			}
-			
-			//Math::GetInstance()->StartMathLesson();
-			
-			//DrawRectangleGradientH(0, 0, screenWidth, screenHeight, BLUE, PURPLE);
-			//DrawText("CARS GO VROOM VROOM", button.mainMenuButtons[2].x + 60, button.mainMenuButtons[2].y - 4, 70, WHITE);
 		}
-
-
-		
 
 	EndDrawing();
 }

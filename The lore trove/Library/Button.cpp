@@ -7,3 +7,7 @@ bool Button::IsClicked(Rectangle rect) {
 
 	return IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), rect);
 }
+
+void Button::DrawButton(Rectangle rect) {
+
+}
