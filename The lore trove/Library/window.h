@@ -23,6 +23,3 @@
 
 
 
-// Text
-
-#define TITLE "Biology Lesson and a mini test about the Cell" 
