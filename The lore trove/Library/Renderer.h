@@ -21,7 +21,7 @@ private:
 
     static Renderer* instance;
 
-    Texture2D menuBackground, subjectChoosingBackground;
+    Texture2D menuBackground, subjectChoosingBackground, backButton;
 
     bool shouldWindowClose = false, menu = true, chooseSubject = false, play = false,main = true,info = false, credits = false;
 

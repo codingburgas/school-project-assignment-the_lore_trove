@@ -23,6 +23,8 @@ public:
 		{1430,150,480,700},
 	};
 
+	Rectangle back = { 10,10,200,106 };
+
 private:
 	
 };

@@ -12,6 +12,7 @@ Button button;
 void Renderer::LoadTextures() {
 	menuBackground = LoadTexture("../assets/mainMenuBackground.png");
 	subjectChoosingBackground = LoadTexture("../assets/chooseSubjectBackground.png");
+	backButton = LoadTexture("../assets/arrow.png");
 }
 
 void Renderer::Update() {
@@ -25,30 +26,44 @@ void Renderer::Update() {
 				DrawText("Info", button.mainMenuButtons[1].x + 60, button.mainMenuButtons[1].y - 4, 70, WHITE);
 				DrawText("Credits", button.mainMenuButtons[2].x + 60, button.mainMenuButtons[2].y - 4, 70, WHITE);
 				DrawText("Exit", button.mainMenuButtons[3].x + 60, button.mainMenuButtons[3].y - 4, 70, WHITE);
+
+				if (button.IsClicked(button.mainMenuButtons[0])) {
+					menu = false;
+					chooseSubject = true;
+				}
+				else if (button.IsClicked(button.mainMenuButtons[1])) {
+					info = true;
+					main = false;
+				}
+				else if (button.IsClicked(button.mainMenuButtons[2])) {
+					credits = true;
+					main = false;
+				}
+				else if (button.IsClicked(button.mainMenuButtons[3])) {
+					Manager::GetInstance()->Close();
+				}
 			}
 			else if (info) {
 				ClearBackground(BLACK);
 				DrawRectangleRec({ 10,10,1900,1060 }, BEIGE);
+				DrawTexture(backButton, button.back.x, button.back.y, WHITE);
+
+				if (button.IsClicked(button.back)) {
+					info = false;
+					main = true;
+				}
 			}
 			else if (credits) {
 				ClearBackground(BLACK);
 				DrawRectangleRec({ 10,10,1900,1060 }, BEIGE);
+				DrawTexture(backButton, button.back.x, button.back.y, WHITE);
+
+				if (button.IsClicked(button.back)) {
+					credits = false;
+					main = true;
+				}
 			}
-			if (button.IsClicked(button.mainMenuButtons[0])) {
-				menu = false;
-				chooseSubject = true;
-			}
-			else if (button.IsClicked(button.mainMenuButtons[1])) {
-				info = true;
-				main = false;
-			}
-			else if (button.IsClicked(button.mainMenuButtons[2])) {
-				credits = true;
-				main = false;
-			}
-			else if (button.IsClicked(button.mainMenuButtons[3])) {
-				Manager::GetInstance()->Close();
-			}
+			
 		}
 		else {
 			if (chooseSubject) {

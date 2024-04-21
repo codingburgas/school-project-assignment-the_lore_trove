@@ -1,26 +1,38 @@
 ﻿  Renderer.cpp
-C:\Users\ant\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(24,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/Renderer.cpp')
-  
-C:\Users\ant\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(24,50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/Renderer.cpp')
-  
 C:\Users\ant\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(25,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   (compiling source file '/Renderer.cpp')
   
 C:\Users\ant\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(25,50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   (compiling source file '/Renderer.cpp')
   
-C:\Users\ant\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(26,87): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ant\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(26,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   (compiling source file '/Renderer.cpp')
   
-C:\Users\ant\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(26,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ant\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(26,50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   (compiling source file '/Renderer.cpp')
   
-C:\Users\ant\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(27,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ant\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(27,87): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   (compiling source file '/Renderer.cpp')
   
-C:\Users\ant\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(27,50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ant\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(27,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/Renderer.cpp')
+  
+C:\Users\ant\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(28,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/Renderer.cpp')
+  
+C:\Users\ant\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(28,50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/Renderer.cpp')
+  
+C:\Users\ant\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(49,55): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/Renderer.cpp')
+  
+C:\Users\ant\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(49,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/Renderer.cpp')
+  
+C:\Users\ant\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(59,55): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/Renderer.cpp')
+  
+C:\Users\ant\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(59,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   (compiling source file '/Renderer.cpp')
   
   Library.vcxproj -> C:\Users\ant\Documents\school-project-assignment-the_lore_trove\The lore trove\x64\Debug\Library.lib
