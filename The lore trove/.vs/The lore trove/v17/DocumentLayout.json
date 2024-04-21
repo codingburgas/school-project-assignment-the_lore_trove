@@ -11,16 +11,16 @@
       "RelativeMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|solutionrelative:Library\\Renderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|C:\\Users\\ant\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Button.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|solutionrelative:Library\\Button.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|C:\\Users\\ant\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|solutionrelative:Library\\Manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|C:\\Users\\ant\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Button.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|solutionrelative:Library\\Button.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|C:\\Users\\ant\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|solutionrelative:Library\\Manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|C:\\Users\\ant\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Button.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|solutionrelative:Library\\Button.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|C:\\Users\\ant\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -56,14 +56,14 @@
               "RelativeDocumentMoniker": "Library\\Button.cpp",
               "ToolTip": "C:\\Users\\ant\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Button.cpp",
               "RelativeToolTip": "Library\\Button.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAfAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-21T10:37:43.306Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Button.h",
               "DocumentMoniker": "C:\\Users\\ant\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Button.h",
               "RelativeDocumentMoniker": "Library\\Button.h",
@@ -113,7 +113,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Manager.cpp",
               "DocumentMoniker": "C:\\Users\\ant\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Manager.cpp",
               "RelativeDocumentMoniker": "Library\\Manager.cpp",
@@ -132,7 +132,7 @@
               "RelativeDocumentMoniker": "Library\\Renderer.h",
               "ToolTip": "C:\\Users\\ant\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Renderer.h",
               "RelativeToolTip": "Library\\Renderer.h",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAA5AAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAABRAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-20T13:07:25.175Z",
               "EditorCaption": ""
@@ -145,7 +145,7 @@
               "RelativeDocumentMoniker": "Library\\Renderer.cpp",
               "ToolTip": "C:\\Users\\ant\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Renderer.cpp",
               "RelativeToolTip": "Library\\Renderer.cpp",
-              "ViewState": "AQIAACYAAAAAAAAAAAAuwD0AAAAMAAAA",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAowHYAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-20T13:07:25.175Z",
               "EditorCaption": ""

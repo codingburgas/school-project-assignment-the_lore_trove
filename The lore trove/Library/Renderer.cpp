@@ -10,9 +10,11 @@ Renderer* Renderer::instance = nullptr;
 Button button;
 
 void Renderer::LoadTextures() {
+
 	menuBackground = LoadTexture("../assets/mainMenuBackground.png");
 	subjectChoosingBackground = LoadTexture("../assets/chooseSubjectBackground.png");
 	backButton = LoadTexture("../assets/arrow.png");
+	chooseLesson = LoadTexture("../assets/chooseLessonBoard.png");
 }
 
 void Renderer::Update() {
@@ -84,12 +86,36 @@ void Renderer::Update() {
 			}
 			else {
 				ClearBackground(WHITE);
-				if (subject == 1) {
+				if (subject == 0) {
+					DrawTexture(chooseLesson, 0, 0, WHITE);
+					DrawTexture(backButton, button.back.x, button.back.y, WHITE);
+
+					if (button.IsClicked(button.back)) {
+						chooseSubject = true;
+					}
+					
+				}
+				else if (subject == 1) {
+					DrawTexture(chooseLesson, 0, 0, WHITE);
+					DrawTexture(backButton, button.back.x, button.back.y, WHITE);
+
+					if (button.IsClicked(button.back)) {
+						chooseSubject = true;
+					}
+
 					if (!Math::GetInstance()->activeLesson) {
 						Math::GetInstance()->PickMathLesson();
 					}
 					else {
 						Math::GetInstance()->StartMathLesson();
+					}
+				}
+				else if (subject == 2) {
+					DrawTexture(chooseLesson, 0, 0, WHITE);
+					DrawTexture(backButton, button.back.x, button.back.y, WHITE);
+
+					if (button.IsClicked(button.back)) {
+						chooseSubject = true;
 					}
 				}
 			}
