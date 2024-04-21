@@ -26,6 +26,13 @@ void Renderer::LoadTextures() {
 	biologyTextures.push_back(LoadTexture("../assets/prokaryote.png"));
 }
 
+void Renderer::UnloadTextures()
+{
+	for (Texture2D& texture : biologyTextures) {
+		UnloadTexture(texture);
+	}
+}
+
 int Renderer::CenterPosition(int offset, char axis, int offsetModifier) {
 	if (axis == 'X') return (GetScreenWidth() / 2) - (offset / 2) - offsetModifier;
 	return ((GetScreenHeight() / 2) - (offset / 2)) - offsetModifier;
@@ -37,11 +44,11 @@ void Renderer::Update() {
 	if (menu) {
 		if (main) {
 			DrawTexture(menuBackground, 0, 0, WHITE);
-			DrawTextEx(font, "The lore trove", { 30, 150 }, 100, 5, WHITE);
-			DrawTextEx(font, "Play", { button.mainMenuButtons[0].x + 60, button.mainMenuButtons[0].y - 4 }, 90, 10, WHITE);
-			DrawTextEx(font, "Info", { button.mainMenuButtons[1].x + 60, button.mainMenuButtons[1].y - 4 }, 90, 10, WHITE);
-			DrawTextEx(font, "Credits", { button.mainMenuButtons[2].x + 60, button.mainMenuButtons[2].y - 4 }, 90, 10, WHITE);
-			DrawTextEx(font, "Exit", { button.mainMenuButtons[3].x + 60, button.mainMenuButtons[3].y - 4 }, 90, 10, WHITE);
+			DrawText("The lore trove", 30, 150, 70, WHITE);
+			DrawText("Play", button.mainMenuButtons[0].x + 60, button.mainMenuButtons[0].y - 4, 70, WHITE);
+			DrawText("Info", button.mainMenuButtons[1].x + 60, button.mainMenuButtons[1].y - 4, 70, WHITE);
+			DrawText("Credits", button.mainMenuButtons[2].x + 60, button.mainMenuButtons[2].y - 4, 70, WHITE);
+			DrawText("Exit", button.mainMenuButtons[3].x + 60, button.mainMenuButtons[3].y - 4, 70, WHITE);
 
 			if (button.IsClicked(button.mainMenuButtons[0])) {
 				menu = false;
@@ -109,7 +116,7 @@ void Renderer::Update() {
 			ClearBackground(WHITE);
 			if (subject == 0) {
 				Biology::GetInstance()->setTextures(biologyTextures);
-				//DrawTexture(chooseLesson, 0, 0, WHITE);
+				DrawTexture(chooseLesson, 0, 0, WHITE);
 				DrawTexture(backButton, button.back.x, button.back.y, WHITE);
 
 				if (button.IsClicked(button.back)) {
@@ -145,4 +152,5 @@ void Renderer::Update() {
 	}
 
 	EndDrawing();
+
 }

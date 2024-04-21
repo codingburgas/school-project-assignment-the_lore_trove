@@ -32,4 +32,5 @@ bool Manager::ShouldWindowClose() {
 void Manager::Close() {
 
 	shouldWindowClose = true;
+	renderer->UnloadTextures();
 }

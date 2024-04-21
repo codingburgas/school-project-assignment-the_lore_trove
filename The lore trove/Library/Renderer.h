@@ -17,7 +17,7 @@ public:
     int CenterPosition(int offset, char axis, int offsetModifier = 0);
 
     void LoadTextures();
-
+    void UnloadTextures();
     void Update();
 
 private:

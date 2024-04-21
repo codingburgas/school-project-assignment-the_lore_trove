@@ -16,7 +16,6 @@ public:
 	}
 
 	void StartLesson();
-	void PickLesson();
 	void LoadSlide();
 	bool CheckButtonClicked(Rectangle buttonRect);
 	void setTextures(vector<Texture2D> textures);

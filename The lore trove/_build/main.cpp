@@ -3,9 +3,9 @@
 
 int main() {
 
-	Manager* manager = Manager::GetInstance();
+    Manager* manager = Manager::GetInstance();
 
-	manager->Initizalize();
+    manager->Initizalize();
 
     while (!manager->ShouldWindowClose())
     {
