@@ -18,7 +18,7 @@ void Renderer::LoadTextures() { // Load all the textures from files
 	chooseLesson = LoadTexture("../assets/chooseLessonBoard.png");
 	ongoingLesson = LoadTexture("../assets/ongoingLessonBackground.png");
 	font = LoadFont("../assets/font/Itim-Regular.ttf");
-	
+
 	ongoingLessonImage = LoadImage("../assets/ongoingLessonBackground.png");
 	ongoingLessonBackgroundColor = GetImageColor(ongoingLessonImage, 300, 200);
 
@@ -53,8 +53,8 @@ void Renderer::Update() {
 	if (menu) {
 		if (main) {  // Render main menu options
 			DrawTexture(menuBackground, 0, 0, WHITE);
-			DrawTextEx(font, "The lore trove", { 30, 150 }, 90,5, WHITE);
-			DrawTextEx(font, "Play", { button.mainMenuButtons[0].x + 60, button.mainMenuButtons[0].y - 4 }, 70,5, WHITE);
+			DrawTextEx(font, "The lore trove", { 30, 150 }, 90, 5, WHITE);
+			DrawTextEx(font, "Play", { button.mainMenuButtons[0].x + 60, button.mainMenuButtons[0].y - 4 }, 70, 5, WHITE);
 			DrawTextEx(font, "Info", { button.mainMenuButtons[1].x + 60, button.mainMenuButtons[1].y - 4 }, 70, 5, WHITE);
 			DrawTextEx(font, "Credits", { button.mainMenuButtons[2].x + 60, button.mainMenuButtons[2].y - 4 }, 70, 5, WHITE);
 			DrawTextEx(font, "Quit", { button.mainMenuButtons[3].x + 60, button.mainMenuButtons[3].y - 4 }, 70, 5, WHITE);
@@ -80,13 +80,29 @@ void Renderer::Update() {
 			ClearBackground(BLACK);  // Render information screen content
 			DrawRectangleRec({ 10,10,1900,1060 }, BEIGE);
 			DrawTexture(backButton, button.back.x, button.back.y, WHITE);
-
+			DrawTextEx(font, "The Lore Trove", { 700, 150 }, 80, 5, BLACK);
+			DrawTextEx(font, "Welcome to The_Lore_Trove, an interesting and", { 350, 300 }, 50, 5, BLACK);
+			DrawTextEx(font, "interactive educational game designed to make", { 350, 375 }, 50, 5, BLACK);
+			DrawTextEx(font, "learning Biology, Math, and Chemistry both enjoyable", { 350, 450 }, 50, 5, BLACK);
+			DrawTextEx(font, "and informative. Dive into a virtual online school where ", { 350, 525 }, 50, 5, BLACK);
+			DrawTextEx(font, "you can explore various topics in these subjects such as:", { 350, 600 }, 50, 5, BLACK);
+			DrawTextEx(font, "Electrosys, Cell, Triangles and more! Through its to", { 350, 675 }, 50, 5, BLACK);
+			DrawTextEx(font, "innovative  approach to education, the game aims ", { 350, 750 }, 50, 5, BLACK);
+			DrawTextEx(font, "to motivate people of all ages to explore the wonders", { 350, 825 }, 50, 5, BLACK);
+			DrawTextEx(font, "of science and mathematics in a fun and dynamic way!", { 350, 900 }, 50, 5, BLACK);
 			if (button.IsClicked(button.back)) {
 				info = false;
 				main = true;
-			}
+			} //  Through its innovative approach to education, the game aims to motivate people 
+			//of all ages to explore the wonders of science and mathematics in a fun and interactive way.
+
+
+
+
+
+
 		}
-		else if (credits) { // Shows the info page
+		else if (credits) { // Shows the credits page
 			ClearBackground(BLACK);
 			DrawRectangleRec({ 10,10,1900,1060 }, BEIGE);
 			DrawTexture(backButton, button.back.x, button.back.y, WHITE);
@@ -156,8 +172,8 @@ void Renderer::Update() {
 			}
 			else if (subject == 2) { // Runs if subject == 2
 
-				
-				
+
+
 				if (!Chemistry::GetInstance()->activeChemistryLesson) {
 					DrawTexture(chooseLesson, 0, 0, WHITE);
 					Chemistry::GetInstance()->PickChemistryLesson();
@@ -167,12 +183,12 @@ void Renderer::Update() {
 				}
 
 				DrawTexture(backButton, button.back.x, button.back.y, WHITE);
-				
+
 				if (button.IsClicked(button.back)) {
 					chooseSubject = true;
 					Chemistry::GetInstance()->activeChemistryLesson = false;
 				}
-				
+
 			}
 		}
 	}
