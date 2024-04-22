@@ -3,6 +3,10 @@
 #include "../raylib-master/src/raylib.h" 
 #include <string>
 #include <vector>
+#include "Renderer.h"
+#include "pch.h"
+#include "framework.h"
+#include "window.h"
 
 using namespace std;
 

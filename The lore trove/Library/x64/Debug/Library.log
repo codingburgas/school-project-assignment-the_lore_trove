@@ -1,8 +1,2 @@
-﻿  ChemistryLesson.cpp
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\ChemistryLesson.cpp(110,159): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/ChemistryLesson.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\ChemistryLesson.cpp(110,111): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/ChemistryLesson.cpp')
-  
-  Library.vcxproj -> D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\x64\Debug\Library.lib
+﻿  Biology.cpp
+  Library.vcxproj -> D:\school-project-assignment-the_lore_trove\The lore trove\x64\Debug\Library.lib
