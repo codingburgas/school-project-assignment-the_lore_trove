@@ -37,5 +37,5 @@ private:
 
 	std::string lesson;
 
-	Texture2D buttons, boardEraser, boardSharpie;
+	Texture2D buttons, boardEraser, boardSharpie, triangleExamples, firstCongruency, secondCongruency, thirdCongruency, fourthCongruency;
 };

@@ -10,10 +10,16 @@ void Math::LoadTextures() {
 	buttons = LoadTexture("../assets/mathLessonIcons.png");
 	boardEraser = LoadTexture("../assets/boardEraser.png");
 	boardSharpie = LoadTexture("../assets/boardSharpie.png");
+
+	triangleExamples = LoadTexture("../assets/triangleExamples.png");
+	firstCongruency = LoadTexture("../assets/firstCongruency.png");
+	secondCongruency = LoadTexture("../assets/secondCongruency.png");
+	thirdCongruency = LoadTexture("../assets/thirdCongruency.png");
+	fourthCongruency = LoadTexture("../assets/fourthCongruency.png");
 }
 
 void Math::BoardEraser(Color ReplacementColor) {
-	Rectangle boardSlideForward = { Renderer::GetInstance()->CenterPosition(83, 'X'), Renderer::GetInstance()->CenterPosition(42, 'Y', -379), 83, 42 };
+	Rectangle boardSlideForward = { Renderer::GetInstance()->CenterPosition(83, 'X'), Renderer::GetInstance()->CenterPosition(42, 'Y', -400), 83, 42 };
 
 	DrawTexture(boardEraser, Renderer::GetInstance()->CenterPosition(83, 'X'), Renderer::GetInstance()->CenterPosition(42, 'Y', -400), WHITE);
 
@@ -27,7 +33,7 @@ void Math::BoardEraser(Color ReplacementColor) {
 }
 
 void Math::BoardSharpie(Color ReplacementColor) {
-	Rectangle boardSlideBack = { Renderer::GetInstance()->CenterPosition(40, 'X', 200), Renderer::GetInstance()->CenterPosition(40, 'Y', -380), 40, 40 };
+	Rectangle boardSlideBack = { Renderer::GetInstance()->CenterPosition(40, 'X', 200), Renderer::GetInstance()->CenterPosition(40, 'Y', -400), 40, 40 };
 
 	DrawTexture(boardSharpie, Renderer::GetInstance()->CenterPosition(40, 'X', 200), Renderer::GetInstance()->CenterPosition(40, 'Y', -400), WHITE);
 
@@ -60,7 +66,7 @@ void Math::LoadWhiteBoardSlides(std::string Theme) {
 			DrawTextEx(Renderer::GetInstance()->font, "Triangles-Definition", { float(Renderer::GetInstance()->Renderer::GetInstance()->CenterPosition(1000, 'X')), float(Renderer::GetInstance()->CenterPosition(575, 'Y')) }, 30, 2, WhiteBoardTextColor);
 			DrawTextEx(Renderer::GetInstance()->font, "Triangles are shapes that consist of three angles.", { float(Renderer::GetInstance()->CenterPosition(975, 'X')), float(Renderer::GetInstance()->CenterPosition(455, 'Y')) }, 25, 2, WhiteBoardTextColor);
 			DrawTextEx(Renderer::GetInstance()->font, "They are divided into acute-angled, right-angled and obtuse-angled:", { float(Renderer::GetInstance()->CenterPosition(975, 'X')), float(Renderer::GetInstance()->CenterPosition(285, 'Y')) }, 25, 2, WhiteBoardTextColor);
-
+			DrawTexture(triangleExamples, Renderer::GetInstance()->CenterPosition(1000, 'X'), Renderer::GetInstance()->CenterPosition(560, 'Y', -75), WHITE);
 			break;
 
 		case 1:
@@ -90,6 +96,15 @@ void Math::LoadWhiteBoardSlides(std::string Theme) {
 
 			DrawTextEx(Renderer::GetInstance()->font, "Signs of Congruency: Examples", { float(Renderer::GetInstance()->CenterPosition(1000, 'X')), float(Renderer::GetInstance()->CenterPosition(575, 'Y')) }, 30, 2, WhiteBoardTextColor);
 
+			DrawTextEx(Renderer::GetInstance()->font, "The First sign of Congruency in action:", { float(Renderer::GetInstance()->CenterPosition(925, 'X')), float(Renderer::GetInstance()->CenterPosition(575, 'Y', -115)) }, 25, 2, WhiteBoardTextColor);
+			DrawTextEx(Renderer::GetInstance()->font, "The Second sign of Congruency in action:", { float(Renderer::GetInstance()->CenterPosition(925, 'X')), float(Renderer::GetInstance()->CenterPosition(575, 'Y', -230)) }, 25, 2, WhiteBoardTextColor);
+			DrawTextEx(Renderer::GetInstance()->font, "The Third sign of Congruency in action:", { float(Renderer::GetInstance()->CenterPosition(925, 'X')), float(Renderer::GetInstance()->CenterPosition(575, 'Y', -345)) }, 25, 2, WhiteBoardTextColor);
+			DrawTextEx(Renderer::GetInstance()->font, "The Fourth sign of Congruency in action:", { float(Renderer::GetInstance()->CenterPosition(925, 'X')), float(Renderer::GetInstance()->CenterPosition(575, 'Y', -460)) }, 25, 2, WhiteBoardTextColor);
+			
+			DrawTexture(firstCongruency, Renderer::GetInstance()->CenterPosition(470, 'X', -275), Renderer::GetInstance()->CenterPosition(112, 'Y', 200), WHITE);
+			DrawTexture(secondCongruency, Renderer::GetInstance()->CenterPosition(470, 'X', -275), Renderer::GetInstance()->CenterPosition(125, 'Y', 85), WHITE);
+			DrawTexture(thirdCongruency, Renderer::GetInstance()->CenterPosition(470, 'X', -275), (GetScreenHeight() / 2 - 125 / 2 + 30), WHITE);
+			DrawTexture(fourthCongruency, Renderer::GetInstance()->CenterPosition(470, 'X', -275), (GetScreenHeight() / 2 - 125 / 2 + 145), WHITE);
 			break;
 
 		case 3:
@@ -100,15 +115,12 @@ void Math::LoadWhiteBoardSlides(std::string Theme) {
 
 			DrawTextEx(Renderer::GetInstance()->font, "First sign of similarity of triangles: if two angles of a triangle", { float(Renderer::GetInstance()->CenterPosition(975, 'X')), float(Renderer::GetInstance()->CenterPosition(455, 'Y')) }, 25, 2, WhiteBoardTextColor);
 			DrawTextEx(Renderer::GetInstance()->font, "are respectively equal to two angles of another triangle.", { float(Renderer::GetInstance()->CenterPosition(925, 'X')), float(Renderer::GetInstance()->CenterPosition(370, 'Y')) }, 25, 2, WhiteBoardTextColor);
-
 			DrawTextEx(Renderer::GetInstance()->font, "Second sign of similarity of triangles: if two sides of a triangle", { float(Renderer::GetInstance()->CenterPosition(975, 'X')), float(Renderer::GetInstance()->CenterPosition(285, 'Y')) }, 25, 2, WhiteBoardTextColor);
 			DrawTextEx(Renderer::GetInstance()->font, "are respectively proportional to two sides of another triangle", { float(Renderer::GetInstance()->CenterPosition(925, 'X')), float(Renderer::GetInstance()->CenterPosition(200, 'Y')) }, 25, 2, WhiteBoardTextColor);
 			DrawTextEx(Renderer::GetInstance()->font, "and the angles locked between them are equal.", { float(Renderer::GetInstance()->CenterPosition(925, 'X')), float(Renderer::GetInstance()->CenterPosition(115, 'Y')) }, 25, 2, WhiteBoardTextColor);
-
 			DrawTextEx(Renderer::GetInstance()->font, "Third sign of similarity of triangles: if all sides of a", { float(Renderer::GetInstance()->CenterPosition(975, 'X')), float(Renderer::GetInstance()->CenterPosition(30, 'Y')) }, 25, 2, WhiteBoardTextColor);
 			DrawTextEx(Renderer::GetInstance()->font, "triangle are respectively proprotional to all sides of another", { float(Renderer::GetInstance()->CenterPosition(925, 'X')), float(Renderer::GetInstance()->CenterPosition(-55, 'Y')) }, 25, 2, WhiteBoardTextColor);
 			DrawTextEx(Renderer::GetInstance()->font, "triangle.", { float(Renderer::GetInstance()->CenterPosition(925, 'X')), float(Renderer::GetInstance()->CenterPosition(-140, 'Y')) }, 25, 2, WhiteBoardTextColor);
-
 			DrawTextEx(Renderer::GetInstance()->font, "Fourth sign of similarity of triangles: if two sides of a", { float(Renderer::GetInstance()->CenterPosition(975, 'X')), float(Renderer::GetInstance()->CenterPosition(-225, 'Y')) }, 25, 2, WhiteBoardTextColor);
 			DrawTextEx(Renderer::GetInstance()->font, "triangle are respectively proportional to two sides of another", { float(Renderer::GetInstance()->CenterPosition(925, 'X')), float(Renderer::GetInstance()->CenterPosition(-310, 'Y')) }, 25, 2, WhiteBoardTextColor);
 			DrawTextEx(Renderer::GetInstance()->font, "triangle and the angles situated oppositely of the greater", { float(Renderer::GetInstance()->CenterPosition(925, 'X')), float(Renderer::GetInstance()->CenterPosition(-395, 'Y')) }, 25, 2, WhiteBoardTextColor);
@@ -138,8 +150,6 @@ void Math::LoadWhiteBoardSlides(std::string Theme) {
 			DrawTextEx(Renderer::GetInstance()->font, " is a square!", { float(Renderer::GetInstance()->CenterPosition(925, 'X')), float(Renderer::GetInstance()->CenterPosition(30, 'Y')) }, 25, 2, WhiteBoardTextColor);
 			DrawTextEx(Renderer::GetInstance()->font, "Examples:", { float(Renderer::GetInstance()->CenterPosition(975, 'X')), float(Renderer::GetInstance()->CenterPosition(-55, 'Y')) }, 25, 2, WhiteBoardTextColor);
 
-			//Texture goes here
-
 			break;
 
 		case 1:
@@ -165,6 +175,7 @@ void Math::LoadWhiteBoardSlides(std::string Theme) {
 			DrawTextEx(Renderer::GetInstance()->font, "The Perimeter of a triangle: P = 2.(a+b);", { float(Renderer::GetInstance()->CenterPosition(975, 'X')), float(Renderer::GetInstance()->CenterPosition(200, 'Y')) }, 25, 2, WhiteBoardTextColor);
 			DrawTextEx(Renderer::GetInstance()->font, "If the rule of a:b = b:(a-b) applies to a rectangle, then", { float(Renderer::GetInstance()->CenterPosition(975, 'X')), float(Renderer::GetInstance()->CenterPosition(115, 'Y')) }, 25, 2, WhiteBoardTextColor);
 			DrawTextEx(Renderer::GetInstance()->font, "it is called a 'Golden rectangle'.", { float(Renderer::GetInstance()->CenterPosition(925, 'X')), float(Renderer::GetInstance()->CenterPosition(115, 'Y')) }, 25, 2, WhiteBoardTextColor);
+			
 			break;
 		default:
 			DrawTextEx(Renderer::GetInstance()->font, "Lesson finished!", { float(Renderer::GetInstance()->CenterPosition(1070, 'X', -300)), float(Renderer::GetInstance()->CenterPosition(635, 'Y', -275)) }, 50, 2, WhiteBoardTextColor);
@@ -187,8 +198,6 @@ void Math::LoadWhiteBoardSlides(std::string Theme) {
 			DrawTextEx(Renderer::GetInstance()->font, "a circle is called a Diameter.", { float(Renderer::GetInstance()->CenterPosition(925, 'X')), float(Renderer::GetInstance()->CenterPosition(115, 'Y')) }, 25, 2, WhiteBoardTextColor);
 			DrawTextEx(Renderer::GetInstance()->font, "The three-dimensional version of the circle is called a", { float(Renderer::GetInstance()->CenterPosition(925, 'X')), float(Renderer::GetInstance()->CenterPosition(30, 'Y')) }, 25, 2, WhiteBoardTextColor);
 			DrawTextEx(Renderer::GetInstance()->font, "sphere.", { float(Renderer::GetInstance()->CenterPosition(925, 'X')), float(Renderer::GetInstance()->CenterPosition(-55, 'Y')) }, 25, 2, WhiteBoardTextColor);
-
-			//Texture goes here
 
 			break;
 		case 1:
