@@ -7,6 +7,7 @@ Button lessonButton;
 Button switchSlidesButton;
 
 void Math::LoadTextures() {
+	//Loads textures
 	buttons = LoadTexture("../assets/mathLessonIcons.png");
 	boardEraser = LoadTexture("../assets/boardEraser.png");
 	boardSharpie = LoadTexture("../assets/boardSharpie.png");
@@ -19,6 +20,8 @@ void Math::LoadTextures() {
 }
 
 void Math::BoardEraser(Color ReplacementColor) {
+	//Draws a board eraser, used for going forwards in lesson slides
+	
 	Rectangle boardSlideForward = { Renderer::GetInstance()->CenterPosition(83, 'X'), Renderer::GetInstance()->CenterPosition(42, 'Y', -400), 83, 42 };
 
 	DrawTexture(boardEraser, Renderer::GetInstance()->CenterPosition(83, 'X'), Renderer::GetInstance()->CenterPosition(42, 'Y', -400), WHITE);
@@ -33,6 +36,8 @@ void Math::BoardEraser(Color ReplacementColor) {
 }
 
 void Math::BoardSharpie(Color ReplacementColor) {
+	//Draws a board sharpie, used for going backwards in lesson slides
+
 	Rectangle boardSlideBack = { Renderer::GetInstance()->CenterPosition(40, 'X', 200), Renderer::GetInstance()->CenterPosition(40, 'Y', -400), 40, 40 };
 
 	DrawTexture(boardSharpie, Renderer::GetInstance()->CenterPosition(40, 'X', 200), Renderer::GetInstance()->CenterPosition(40, 'Y', -400), WHITE);
@@ -47,6 +52,8 @@ void Math::BoardSharpie(Color ReplacementColor) {
 }
 
 void Math::LoadWhiteBoardSlides(std::string Theme) {
+	//Loads the contents of different lesson slides, depending on theme and order 
+	
 	Color WhiteBoardEdgesColor = Color{ 0, 0, 0, 255 };
 	Color WhiteBoardColor = Color{ 255, 255, 255, 255 };
 	Color WhiteBoardTextColor = Color{ 0, 0, 0, 255 };
@@ -57,7 +64,8 @@ void Math::LoadWhiteBoardSlides(std::string Theme) {
 	DrawRectangle(Renderer::GetInstance()->CenterPosition(1070, 'X'), Renderer::GetInstance()->CenterPosition(665, 'Y'), 1070, 665, WhiteBoardEdgesColor);
 	DrawRectangle(Renderer::GetInstance()->CenterPosition(1050, 'X'), Renderer::GetInstance()->CenterPosition(645, 'Y'), 1050, 645, WhiteBoardColor);
 
-	if (Theme == "Triangles") {
+	//Draws lesson for triangles
+	if (Theme == "Triangles") { 
 		switch (currentSlide) {
 		case 0:
 			DrawRectangle(Renderer::GetInstance()->CenterPosition(1070, 'X'), Renderer::GetInstance()->CenterPosition(665, 'Y'), 1070, 665, WhiteBoardEdgesColor);
@@ -134,6 +142,7 @@ void Math::LoadWhiteBoardSlides(std::string Theme) {
 			break;
 		}
 	}
+	//Draws lesson for rectangles
 	else if (Theme == "Rectangles") {
 		switch (currentSlide) {
 		case 0:
@@ -184,6 +193,7 @@ void Math::LoadWhiteBoardSlides(std::string Theme) {
 			break;
 		}
 	}
+	//Draws lessons for circles
 	else if (Theme == "Circles") {
 		switch (currentSlide) {
 		case 0:
@@ -235,6 +245,7 @@ void Math::LoadWhiteBoardSlides(std::string Theme) {
 	}
 }
 
+//Enables the user to pick a math lesson of their liking
 void Math::PickMathLesson() {
 	currentSlide = 0;
 	DrawTexture(buttons, 0, 0, WHITE);
@@ -252,6 +263,7 @@ void Math::PickMathLesson() {
 	}
 }
 
+//Starts the math lesson
 void Math::StartMathLesson() {
 	LoadWhiteBoardSlides(lesson);
 	BoardEraser(Renderer::GetInstance()->Renderer::ongoingLessonBackgroundColor);

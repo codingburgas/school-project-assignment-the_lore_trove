@@ -11,6 +11,18 @@
       "RelativeMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|solutionrelative:Library\\MathLesson.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|C:\\Users\\Ivan-Mihail\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|solutionrelative:Library\\Manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|C:\\Users\\Ivan-Mihail\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\ChemistryLesson.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|solutionrelative:Library\\ChemistryLesson.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|C:\\Users\\Ivan-Mihail\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Button.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|solutionrelative:Library\\Button.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|C:\\Users\\Ivan-Mihail\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|solutionrelative:Library\\Manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -31,20 +43,8 @@
       "RelativeMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|solutionrelative:Library\\Renderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|C:\\Users\\Ivan-Mihail\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|solutionrelative:Library\\Manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5197A086-3DFA-2F2B-E67F-68E1D2C1FBAD}|_build\\game-premake.vcxproj|C:\\Users\\Ivan-Mihail\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\_build\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5197A086-3DFA-2F2B-E67F-68E1D2C1FBAD}|_build\\game-premake.vcxproj|solutionrelative:_build\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|C:\\Users\\Ivan-Mihail\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Button.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|solutionrelative:Library\\Button.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|C:\\Users\\Ivan-Mihail\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\ChemistryLesson.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2CFB9D40-E79E-4776-92B6-2E2D0B959960}|Library\\Library.vcxproj|solutionrelative:Library\\ChemistryLesson.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,19 +58,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "ChemistryLesson.h",
               "DocumentMoniker": "C:\\Users\\Ivan-Mihail\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\ChemistryLesson.h",
               "RelativeDocumentMoniker": "Library\\ChemistryLesson.h",
               "ToolTip": "C:\\Users\\Ivan-Mihail\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\ChemistryLesson.h",
               "RelativeToolTip": "Library\\ChemistryLesson.h",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAvAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-21T22:22:40.026Z"
+              "WhenOpened": "2024-04-21T22:22:40.026Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "ChemistryLesson.cpp",
               "DocumentMoniker": "C:\\Users\\Ivan-Mihail\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\ChemistryLesson.cpp",
               "RelativeDocumentMoniker": "Library\\ChemistryLesson.cpp",
@@ -82,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Button.cpp",
               "DocumentMoniker": "C:\\Users\\Ivan-Mihail\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Button.cpp",
               "RelativeDocumentMoniker": "Library\\Button.cpp",
@@ -94,15 +95,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "Button.h",
               "DocumentMoniker": "C:\\Users\\Ivan-Mihail\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Button.h",
               "RelativeDocumentMoniker": "Library\\Button.h",
               "ToolTip": "C:\\Users\\Ivan-Mihail\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Button.h",
               "RelativeToolTip": "Library\\Button.h",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAowAsAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-21T10:36:41.495Z"
+              "WhenOpened": "2024-04-21T10:36:41.495Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -112,7 +114,7 @@
               "RelativeDocumentMoniker": "Library\\MathLesson.h",
               "ToolTip": "C:\\Users\\Ivan-Mihail\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\MathLesson.h",
               "RelativeToolTip": "Library\\MathLesson.h",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACcAAACGAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-20T13:07:23.937Z",
               "EditorCaption": ""
@@ -125,14 +127,14 @@
               "RelativeDocumentMoniker": "Library\\MathLesson.cpp",
               "ToolTip": "C:\\Users\\Ivan-Mihail\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\MathLesson.cpp",
               "RelativeToolTip": "Library\\MathLesson.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAACIAAAA",
+              "ViewState": "AQIAAPkAAAAAAAAAAAAAAAkBAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-20T13:07:24.365Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "Manager.h",
               "DocumentMoniker": "C:\\Users\\Ivan-Mihail\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Manager.h",
               "RelativeDocumentMoniker": "Library\\Manager.h",
@@ -140,11 +142,12 @@
               "RelativeToolTip": "Library\\Manager.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-20T13:07:25.172Z"
+              "WhenOpened": "2024-04-20T13:07:25.172Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Manager.cpp",
               "DocumentMoniker": "C:\\Users\\Ivan-Mihail\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Manager.cpp",
               "RelativeDocumentMoniker": "Library\\Manager.cpp",
@@ -156,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Renderer.h",
               "DocumentMoniker": "C:\\Users\\Ivan-Mihail\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Renderer.h",
               "RelativeDocumentMoniker": "Library\\Renderer.h",
@@ -168,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Renderer.cpp",
               "DocumentMoniker": "C:\\Users\\Ivan-Mihail\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\Library\\Renderer.cpp",
               "RelativeDocumentMoniker": "Library\\Renderer.cpp",
@@ -180,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\Ivan-Mihail\\Documents\\school-project-assignment-the_lore_trove\\The lore trove\\_build\\main.cpp",
               "RelativeDocumentMoniker": "_build\\main.cpp",
