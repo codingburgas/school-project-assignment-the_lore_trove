@@ -16,8 +16,14 @@ void Renderer::LoadTextures() { // Load all the textures from files
 	subjectChoosingBackground = LoadTexture("../assets/chooseSubjectBackground.png");
 	backButton = LoadTexture("../assets/arrow.png");
 	chooseLesson = LoadTexture("../assets/chooseLessonBoard.png");
+	ongoingLesson = LoadTexture("../assets/ongoingLessonBackground.png");
 	font = LoadFont("../assets/font/Itim-Regular.ttf");
 	
+	ongoingLessonImage = LoadImage("../assets/ongoingLessonBackground.png");
+	ongoingLessonBackgroundColor = GetImageColor(ongoingLessonImage, 300, 200);
+
+	ongoingLessonBackgroundColor;
+
 	biologyTextures.push_back(LoadTexture("../assets/chooseLessonBoard.png"));
 	biologyTextures.push_back(LoadTexture("../assets/biologyLessonIcon1.png"));
 	biologyTextures.push_back(LoadTexture("../assets/biologyLessonIcon2.png"));
@@ -89,7 +95,7 @@ void Renderer::Update() {
 			DrawTextEx(font, "Antonia Taneva - 10th grade - Front-end Developer and Designer", { 250, 375 }, 50, 5, BLACK);
 			DrawTextEx(font, "Valeria Chavdarova - 10th grade - Back-end Developer", { 300, 450 }, 50, 5, BLACK);
 			DrawTextEx(font, "Ivan-Michail Ivanov  - 9th grade - Back-end Developer", { 320, 525 }, 50, 5, BLACK);
-			DrawTextEx(font, "Pavlin Peev - 9th grade - Back-end Developer", { 420, 675 }, 50, 5, BLACK);
+			DrawTextEx(font, "Pavlin Peev - 9th grade - Quality Assurance", { 420, 675 }, 50, 5, BLACK);
 			DrawTextEx(font, "Nikolay Kulov - 9th grade - Back-end Developer", { 400, 600 }, 50, 5, BLACK);
 
 			if (button.IsClicked(button.back)) {
@@ -143,6 +149,8 @@ void Renderer::Update() {
 					Math::GetInstance()->PickMathLesson();
 				}
 				else {
+					DrawTexture(ongoingLesson, 0, 0, WHITE);
+					DrawTexture(backButton, button.back.x, button.back.y, WHITE);
 					Math::GetInstance()->StartMathLesson();
 				}
 			}

@@ -19,6 +19,8 @@ public:
 
 	void BoardEraser(Color replacementColor);
 
+	void BoardSharpie(Color replacementColor);
+
 	void LoadWhiteBoardSlides(std::string theme);
 
 	void PickMathLesson();
@@ -35,5 +37,5 @@ private:
 
 	std::string lesson;
 
-	Texture2D buttons;
+	Texture2D buttons, boardEraser, boardSharpie;
 };

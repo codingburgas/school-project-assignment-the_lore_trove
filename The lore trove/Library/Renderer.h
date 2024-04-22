@@ -22,6 +22,10 @@ public:
 
     Texture2D chooseChemistry;
 
+    Image ongoingLessonImage;
+
+    Color ongoingLessonBackgroundColor;
+
     Font font;
 
 private:
@@ -30,7 +34,7 @@ private:
 
     
 
-    Texture2D menuBackground, subjectChoosingBackground, backButton, chooseLesson;
+    Texture2D menuBackground, subjectChoosingBackground, backButton, chooseLesson, ongoingLesson;
 
     std::vector<Texture2D> biologyTextures; // Vector to store biology lesson textures
 

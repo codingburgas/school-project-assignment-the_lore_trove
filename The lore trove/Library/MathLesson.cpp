@@ -4,29 +4,39 @@
 
 Math* Math::instance = nullptr;
 Button lessonButton;
+Button switchSlidesButton;
 
 void Math::LoadTextures() {
 	buttons = LoadTexture("../assets/mathLessonIcons.png");
+	boardEraser = LoadTexture("../assets/boardEraser.png");
+	boardSharpie = LoadTexture("../assets/boardSharpie.png");
 }
+
 void Math::BoardEraser(Color ReplacementColor) {
-	Color BoardEraserColor = Color{ 0, 49, 122, 255 };
-	Color BoardEraserShade = Color{ 1, 35, 87, 255 };
-	Color White = Color{ 255, 255, 255, 255 };
+	Rectangle boardSlideForward = { Renderer::GetInstance()->CenterPosition(83, 'X'), Renderer::GetInstance()->CenterPosition(42, 'Y', -379), 83, 42 };
 
-	Rectangle BoardEraserExit = { Renderer::GetInstance()->CenterPosition(83, 'X'), Renderer::GetInstance()->CenterPosition(42, 'Y', -379), 83, 42 };
+	DrawTexture(boardEraser, Renderer::GetInstance()->CenterPosition(83, 'X'), Renderer::GetInstance()->CenterPosition(42, 'Y', -400), WHITE);
 
-	DrawRectangle(Renderer::GetInstance()->CenterPosition(83, 'X'), Renderer::GetInstance()->CenterPosition(45, 'Y', -400), 83, 45, BoardEraserShade);
-	DrawRectangle(Renderer::GetInstance()->CenterPosition(80, 'X'), Renderer::GetInstance()->CenterPosition(42, 'Y', -400), 80, 42, BoardEraserColor);
+	if (CheckCollisionPointRec(GetMousePosition(), boardSlideForward)) {
 
-	if (CheckCollisionPointRec(GetMousePosition(), BoardEraserExit)) {
+		DrawRectangle(Renderer::GetInstance()->CenterPosition(85, 'X'), Renderer::GetInstance()->CenterPosition(45, 'Y', -400), 85, 46, ReplacementColor);
+		DrawTexture(boardEraser, Renderer::GetInstance()->CenterPosition(83, 'X'), Renderer::GetInstance()->CenterPosition(42, 'Y', -390), WHITE);
 
-		DrawRectangle(Renderer::GetInstance()->CenterPosition(85, 'X'), Renderer::GetInstance()->CenterPosition(45, 'Y', -400), 85, 45, ReplacementColor);
-		DrawRectangle(Renderer::GetInstance()->CenterPosition(83, 'X'), Renderer::GetInstance()->CenterPosition(55, 'Y', -400), 83, 45, BoardEraserShade);
-		DrawRectangle(Renderer::GetInstance()->CenterPosition(80, 'X'), Renderer::GetInstance()->CenterPosition(52, 'Y', -400), 80, 42, BoardEraserColor);
+		if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) currentSlide++;
+	}
+}
 
-		if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
-			currentSlide++;
-		}
+void Math::BoardSharpie(Color ReplacementColor) {
+	Rectangle boardSlideBack = { Renderer::GetInstance()->CenterPosition(40, 'X', 200), Renderer::GetInstance()->CenterPosition(40, 'Y', -380), 40, 40 };
+
+	DrawTexture(boardSharpie, Renderer::GetInstance()->CenterPosition(40, 'X', 200), Renderer::GetInstance()->CenterPosition(40, 'Y', -400), WHITE);
+	
+	if (CheckCollisionPointRec(GetMousePosition(), boardSlideBack)) {
+
+		DrawRectangle(Renderer::GetInstance()->CenterPosition(50, 'X', 200), Renderer::GetInstance()->CenterPosition(50, 'Y', -400), 50, 50, ReplacementColor);
+		DrawTexture(boardSharpie, Renderer::GetInstance()->CenterPosition(40, 'X', 200), Renderer::GetInstance()->CenterPosition(40, 'Y', -390), WHITE);
+
+		if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && currentSlide > 0) currentSlide--;
 	}
 }
 
@@ -76,6 +86,11 @@ void Math::LoadWhiteBoardSlides(std::string Theme) {
 			DrawText("Formulas for the volume of a triangle:", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(315, 'Y'), 25, WhiteBoardTextColor);
 			break;
 
+		default :
+			DrawText("Lesson finished!", Renderer::GetInstance()->CenterPosition(1070, 'X', -300), Renderer::GetInstance()->CenterPosition(635, 'Y', -300), 50, WhiteBoardTextColor);
+			DrawText("Congratulations!", Renderer::GetInstance()->CenterPosition(1070, 'X', -300), Renderer::GetInstance()->CenterPosition(635, 'Y', -400), 50, WhiteBoardTextColor);
+			if (currentSlide > 3) currentSlide--;
+			break;
 		}
 	}
 	else if (Theme == "Rectangles") {
@@ -87,6 +102,11 @@ void Math::LoadWhiteBoardSlides(std::string Theme) {
 			DrawText("A rectangle has two equal sides.", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(485, 'Y'), 25, WhiteBoardTextColor);
 			DrawText("Circumference of a rectangle:P = 2.(a + b)", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(400, 'Y'), 25, WhiteBoardTextColor);
 			DrawText("Face of a rectangle: S = a.b", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(315, 'Y'), 25, WhiteBoardTextColor);
+			break;
+		default:
+			DrawText("Lesson finished!", Renderer::GetInstance()->CenterPosition(1070, 'X', -300), Renderer::GetInstance()->CenterPosition(635, 'Y', -275), 50, WhiteBoardTextColor);
+			DrawText("Congratulations!", Renderer::GetInstance()->CenterPosition(1070, 'X', -300), Renderer::GetInstance()->CenterPosition(635, 'Y', -375), 50, WhiteBoardTextColor);
+			if (currentSlide > 1) currentSlide--;
 			break;
 		}
 	}
@@ -107,6 +127,11 @@ void Math::LoadWhiteBoardSlides(std::string Theme) {
 			DrawRectangle(Renderer::GetInstance()->CenterPosition(1050, 'X'), Renderer::GetInstance()->CenterPosition(615, 'Y'), 1050, 615, WhiteBoardColor);
 			DrawText("Circle", Renderer::GetInstance()->CenterPosition(1000, 'X'), Renderer::GetInstance()->CenterPosition(575, 'Y'), 30, WhiteBoardTextColor);
 			DrawText("Formulas for the Diameter = 2.radius (d = 2r)", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(485, 'Y'), 25, WhiteBoardTextColor);
+			break;
+		default:
+			DrawText("Lesson finished!", Renderer::GetInstance()->CenterPosition(1070, 'X', -300), Renderer::GetInstance()->CenterPosition(635, 'Y', -300), 50, WhiteBoardTextColor);
+			DrawText("Congratulations!", Renderer::GetInstance()->CenterPosition(1070, 'X', -300), Renderer::GetInstance()->CenterPosition(635, 'Y', -400), 50, WhiteBoardTextColor);
+			if (currentSlide > 2) currentSlide--;
 			break;
 		}
 	}
@@ -131,5 +156,6 @@ void Math::PickMathLesson() {
 
 void Math::StartMathLesson() {
 	LoadWhiteBoardSlides(lesson);
-	BoardEraser(BLACK);
+	BoardEraser(Renderer::GetInstance()->Renderer::ongoingLessonBackgroundColor);
+	BoardSharpie(Renderer::GetInstance()->Renderer::ongoingLessonBackgroundColor);
 }
