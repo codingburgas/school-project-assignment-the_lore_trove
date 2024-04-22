@@ -1,4 +1,4 @@
 ﻿  ChemistryLesson.cpp
-C:\Users\user\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\ChemistryLesson.cpp(126,159): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\ChemistryLesson.cpp(126,111): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\ChemistryLesson.cpp(147,159): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\ChemistryLesson.cpp(147,111): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   Library.vcxproj -> C:\Users\user\Documents\school-project-assignment-the_lore_trove\The lore trove\x64\Debug\Library.lib

@@ -70,7 +70,7 @@ void Chemistry::SwitchScenes(std::string chemistryTheme) {
 	}
 	else if (chemistryTheme == "Litmus") {
 
-		if (currentScene != 6) {
+		if (currentScene != 7) {
 			if (chemistryButton.IsClicked({ 0,0,1980,1080 })) {
 				currentScene++;
 			}
@@ -84,18 +84,33 @@ void Chemistry::SwitchScenes(std::string chemistryTheme) {
 
 		case 1:
 			DrawTexture(litmusLemon1, 0, 0, WHITE);
+			DrawTexture(infoBox, 0, 0, WHITE);
+			DrawTextEx(Renderer::GetInstance()->font, "Here we have lemon", { 65,700 }, 50, 2, BLACK);
+			DrawTextEx(Renderer::GetInstance()->font, "juice", { 65, 750 }, 50, 2, BLACK);
 			break;
 
 		case 2:
 			DrawTexture(litmusLemon2, 0, 0, WHITE);
+			DrawTexture(infoBox, 0, 0, WHITE);
+			DrawTextEx(Renderer::GetInstance()->font, "In this experiment", { 65,700 }, 50, 2, BLACK);
+			DrawTextEx(Renderer::GetInstance()->font, "we will be using", { 65, 750 }, 50, 2, BLACK);
+			DrawTextEx(Renderer::GetInstance()->font, "standard litmus paper", { 65,800 }, 50, 2, BLACK);
 			break;
 
 		case 3:
 			DrawTexture(litmusLemon3, 0, 0, WHITE);
+			DrawTexture(infoBox, 0, 0, WHITE);
+			DrawTextEx(Renderer::GetInstance()->font, "As we can see because of its", { 65,700 }, 50, 2, BLACK);
+			DrawTextEx(Renderer::GetInstance()->font, "acidic nature it colors", { 65, 750 }, 50, 2, BLACK);
+			DrawTextEx(Renderer::GetInstance()->font, "the litmus an orangish", { 65,800 }, 50, 2, BLACK);
+			DrawTextEx(Renderer::GetInstance()->font, "red color", { 65,850 }, 50, 2, BLACK);
 			break;
 
 		case 4:
 			DrawTexture(litmusNaOH1, 0, 0, WHITE);
+			DrawTexture(infoBox, 0, 0, WHITE);
+			DrawTextEx(Renderer::GetInstance()->font, "In the next experiment we", { 65,700 }, 50, 2, BLACK);
+			DrawTextEx(Renderer::GetInstance()->font, "have a 1% NaOH solution", { 65, 750 }, 50, 2, BLACK);
 			break;
 
 		case 5:
@@ -104,10 +119,16 @@ void Chemistry::SwitchScenes(std::string chemistryTheme) {
 
 		case 6:
 			DrawTexture(litmusNaOH3, 0, 0, WHITE);
-			DrawTextEx(Renderer::GetInstance()->font, "Lesson finished!", { 700,700 }, 80, 5, BLACK);
-
+			DrawTexture(infoBox, 0, 0, WHITE);
+			DrawTextEx(Renderer::GetInstance()->font, "Owing to its basic nature", { 65,700 }, 50, 2, BLACK);
+			DrawTextEx(Renderer::GetInstance()->font, "the NaOH colors the litmus", { 65, 750 }, 50, 2, BLACK);
+			DrawTextEx(Renderer::GetInstance()->font, "a dark blue color", { 65,800 }, 50, 2, BLACK);
+			break;
+		case 7:
+			DrawTexture(endBackground, 0, 0, WHITE);
 			chemistryButton.DrawButton(chemistryButton.backToLessons);
-
+			
+			DrawTextEx(Renderer::GetInstance()->font, "Lesson finished!", { 700,500 }, 80, 5, BLACK);
 			DrawTextEx(Renderer::GetInstance()->font, "Choose another lesson", { chemistryButton.backToLessons.x, chemistryButton.backToLessons.y }, 80, 5, BLACK);
 			if (chemistryButton.IsClicked(chemistryButton.backToLessons)) {
 				activeChemistryLesson = false;
