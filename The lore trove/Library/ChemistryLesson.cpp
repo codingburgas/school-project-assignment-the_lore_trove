@@ -10,9 +10,13 @@ void Chemistry::LoadTextures() {
 	electrolysisAfter = LoadTexture("../assets/electrolysisAfter.png");
 	afterTime = LoadTexture("../assets/afterTime.png");
 
+	infoBox = LoadTexture("../assets/chemistryInfoBox.png");
+
 	litmusLemon1 = LoadTexture("../assets/litmusLemon1.png");
 	litmusLemon2 = LoadTexture("../assets/litmusLemon2.png");
 	litmusLemon3 = LoadTexture("../assets/litmusLemon3.png");
+
+	endBackground = LoadTexture("../assets/ongoingLessonBackground.png");
 
 	litmusNaOH1 = LoadTexture("../assets/litmusNaOH1.png");
 	litmusNaOH2 = LoadTexture("../assets/litmusNaOH2.png");
@@ -21,18 +25,20 @@ void Chemistry::LoadTextures() {
 
 void Chemistry::SwitchScenes(std::string chemistryTheme) {
 	if (chemistryTheme == "Electrolysis") {
-		if (currentScene != 3) {
+		if (currentScene != 4) {
 			if (chemistryButton.IsClicked({ 0,0,1980,1080 })) {
 				currentScene++;
 			}
 		}
-		
 
 		switch (currentScene) {
 
 		case 1:
 			DrawTexture(electrolysisBefore, 0, 0, WHITE);
-			
+			DrawTexture(infoBox, 0, 0, WHITE);
+			DrawTextEx(Renderer::GetInstance()->font, "In this stage of the electrolysis", { 65,700 }, 50, 2, BLACK);
+			DrawTextEx(Renderer::GetInstance()->font, "we put two electrolytes in", { 65, 750 }, 50, 2, BLACK);
+			DrawTextEx(Renderer::GetInstance()->font, "water", { 65, 800 }, 50, 2, BLACK);
 			break;
 		case 2:
 			DrawTexture(afterTime, 0, 0, WHITE);
@@ -40,8 +46,18 @@ void Chemistry::SwitchScenes(std::string chemistryTheme) {
 
 		case 3:
 			DrawTexture(electrolysisAfter, 0, 0, WHITE);
+			DrawTexture(infoBox, 0, 0, WHITE);
+			DrawTextEx(Renderer::GetInstance()->font, "After a while, owing to the ", { 65,700 }, 50, 2, BLACK);
+			DrawTextEx(Renderer::GetInstance()->font, "electric current helping to ", { 65, 750 }, 50, 2, BLACK);
+			DrawTextEx(Renderer::GetInstance()->font, "cause an chemical reaction", { 65,800 }, 50, 2, BLACK);
+			DrawTextEx(Renderer::GetInstance()->font, "(electrolysis), the anode", { 65, 850 }, 50, 2, BLACK);
+			DrawTextEx(Renderer::GetInstance()->font, "oxidizes, while the cathode ", { 65,900 }, 50, 2, BLACK);
+			DrawTextEx(Renderer::GetInstance()->font, "reduces ", { 65,950 }, 50, 2, BLACK);
+			break;
 
-			DrawTextEx(Renderer::GetInstance()->font, "Lesson finished!", { 700,700 }, 80, 5, BLACK);
+		case 4:
+			DrawTexture(endBackground, 0, 0, WHITE);
+			DrawTextEx(Renderer::GetInstance()->font, "Lesson finished!", { 700,500 }, 80, 5, BLACK);
 
 			chemistryButton.DrawButton(chemistryButton.backToLessons);
 
