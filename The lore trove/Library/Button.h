@@ -27,6 +27,8 @@ public:
 
 	Rectangle chooseChemistryLessonIcons = { 0, 0, 0, 0 };
 
+	Rectangle backToLessons = { 600,800,740,90 };
+
 private:
 	
 };

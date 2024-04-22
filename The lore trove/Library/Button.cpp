@@ -9,5 +9,5 @@ bool Button::IsClicked(Rectangle rect) {
 }
 
 void Button::DrawButton(Rectangle rect) {
-	DrawRectangleRec(rect, BLACK);
+	DrawRectangleRec(rect, ORANGE);
 }

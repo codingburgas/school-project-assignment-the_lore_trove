@@ -147,10 +147,10 @@ void Renderer::Update() {
 			}
 			else if (subject == 2) { // Runs if subject == 2
 
-				DrawTexture(chooseLesson, 0, 0, WHITE);
+				
 				
 				if (!Chemistry::GetInstance()->activeChemistryLesson) {
-
+					DrawTexture(chooseLesson, 0, 0, WHITE);
 					Chemistry::GetInstance()->PickChemistryLesson();
 				}
 				else {

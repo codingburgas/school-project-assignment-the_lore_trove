@@ -33,6 +33,6 @@ private:
 
 	std::string lessonChemistry;
 	
-	Texture2D electrolysisBefore, electrolysisAfter, litmusLemon1, litmusLemon2, litmusLemon3, litmusNaOH1, litmusNaOH2, litmusNaOH3;
+	Texture2D electrolysisBefore, electrolysisAfter, afterTime, litmusLemon1, litmusLemon2, litmusLemon3, litmusNaOH1, litmusNaOH2, litmusNaOH3;
 
 };
