@@ -2,6 +2,7 @@
 #include "../raylib-master/src/raylib.h" 
 #include "Renderer.h"
 #include "MathLesson.h"
+#include "ChemistryLesson.h"
 #include "window.h"
 
 class Manager {
@@ -31,4 +32,6 @@ private:
     bool shouldWindowClose = false;
 
     Renderer* renderer;
+
+    Chemistry* chemistry;
 };

@@ -22,11 +22,13 @@ public:
 
     Texture2D chooseChemistry;
 
+    Font font;
+
 private:
 
     static Renderer* instance;
 
-    Font font;
+    
 
     Texture2D menuBackground, subjectChoosingBackground, backButton, chooseLesson;
 

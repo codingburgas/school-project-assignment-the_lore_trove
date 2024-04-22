@@ -15,7 +15,7 @@ public:
 		return instance;
 	}
 
-	void DetectClick();
+	void LoadTextures();
 
 	void SwitchScenes(std::string chemistryTheme);
 
@@ -32,4 +32,7 @@ private:
 	int currentScene = 1;
 
 	std::string lessonChemistry;
+	
+	Texture2D electrolysisBefore, electrolysisAfter, litmusLemon1, litmusLemon2, litmusLemon3, litmusNaOH1, litmusNaOH2, litmusNaOH3;
+
 };

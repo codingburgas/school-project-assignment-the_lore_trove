@@ -146,19 +146,24 @@ void Renderer::Update() {
 				}
 			}
 			else if (subject == 2) { // Runs if subject == 2
+
 				DrawTexture(chooseLesson, 0, 0, WHITE);
-				DrawTexture(backButton, button.back.x, button.back.y, WHITE);
-
-				if (button.IsClicked(button.back)) {
-					chooseSubject = true;
-				}
-
+				
 				if (!Chemistry::GetInstance()->activeChemistryLesson) {
+
 					Chemistry::GetInstance()->PickChemistryLesson();
 				}
 				else {
 					Chemistry::GetInstance()->StartChemistryLesson();
 				}
+
+				DrawTexture(backButton, button.back.x, button.back.y, WHITE);
+				
+				if (button.IsClicked(button.back)) {
+					chooseSubject = true;
+					Chemistry::GetInstance()->activeChemistryLesson = false;
+				}
+				
 			}
 		}
 	}
