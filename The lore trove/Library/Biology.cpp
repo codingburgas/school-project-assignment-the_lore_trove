@@ -7,7 +7,10 @@
 Biology* Biology::instance = nullptr;
 
 void DrawButton(Rectangle rect, const char* text, Color idleColor, Color hoverColor, Color textColor) {
-    bool isHovered = CheckCollisionPointRec(GetMousePosition(), rect); // Check if the mouse cursor is hovering over the button
+
+    // Check if the mouse cursor is hovering over the button
+    bool isHovered = CheckCollisionPointRec(GetMousePosition(), rect); 
+
     // Draw button according to hover state
     if (isHovered) {
         DrawRectangleRec(rect, hoverColor);
@@ -15,12 +18,14 @@ void DrawButton(Rectangle rect, const char* text, Color idleColor, Color hoverCo
     else {
         DrawRectangleRec(rect, idleColor);
     }
-    DrawTextEx(Renderer::GetInstance()->font, text, { rect.x + 40, rect.y + 20 }, 30, 5, textColor); // Draw button text
+
+    // Draw button text
+    DrawTextEx(Renderer::GetInstance()->font, text, { rect.x + 40, rect.y + 20 }, 30, 5, textColor); 
 }
 
 // Function to start a biology lesson
-void Biology::StartLesson()
-{
+void Biology::StartLesson(){
+
     // Draw common board elements
     DrawTexture(_textures[3], 0, 0, WHITE);
     DrawRectangle(BOARDX, BOARDY, BOARD_WIDTH, BOARD_HEIGHT, WHITE_BOARD_MARGIN_COLOR);
@@ -58,10 +63,11 @@ void Biology::StartLesson()
             break;
         }
     }
-    else if (lesson == 2) {  // Draw lesson specific content for the second icon
+    // Draw lesson specific content for the second icon
+    else if (lesson == 2) {  
         switch (currentSlide) {
-        case 1:
-        {
+        case 1: {
+
             DrawTexture(_textures[5], BOARDX + 5, BOARDY + 25, WHITE);
             DrawTextEx(Renderer::GetInstance()->font, "Eukaryotic Cell", { BOARDX + (BOARD_WIDTH / 2) - 460 + 545, BOARDY + 25 }, 35, 5, WHITE_BOARD_TEXT_COLOR);
             DrawTextEx(Renderer::GetInstance()->font, "Eukaryote, any cell or", { BOARDX + (BOARD_WIDTH / 2) - 460 + 470, BOARDY + 90 }, 35, 5, WHITE_BOARD_TEXT_COLOR);
@@ -120,16 +126,19 @@ void Biology::StartLesson()
     }
 }
 
-void Biology::LoadSlide() // Function to load a specific slide
-{
+// Function to load a specific slide
+void Biology::LoadSlide(){
+
     Rectangle lessonButton1 = { 300, screenHeight / 5, 613, 790 };
     Rectangle lessonButton2 = { screenWidth / 2, screenHeight / 5, 611, 812 };
     if (!lesson) {
 
+        // Draw buttons for selecting lessons
         DrawTexture(_textures[1], 300, screenHeight / 5, WHITE);
-        DrawTexture(_textures[2], screenWidth / 2, screenHeight / 5, WHITE); // Draw buttons for selecting lessons
+        DrawTexture(_textures[2], screenWidth / 2, screenHeight / 5, WHITE); 
 
-        if (CheckButtonClicked(lessonButton1)) {  // Check if lesson buttons are clicked
+        // Check if lesson buttons are clicked
+        if (CheckButtonClicked(lessonButton1)) {  
             lesson = 1;
             currentSlide = 1;
         }
@@ -139,9 +148,11 @@ void Biology::LoadSlide() // Function to load a specific slide
         }
     }
     else {
-        Rectangle nextButton = NEXT_BUTTON; // Check which button should be displayed based on lesson and slide
+        // Check which button should be displayed based on lesson and slide
+        Rectangle nextButton = NEXT_BUTTON; 
 
-        if (lesson == 1) { // Update next button for lesson 1
+        // Update next button for lesson 1
+        if (lesson == 1) { 
             switch (currentSlide)
             {
             case 1:
@@ -158,7 +169,8 @@ void Biology::LoadSlide() // Function to load a specific slide
                 break;
             }
         }
-        if (lesson == 2) { // Update next button for lesson 2
+        // Update next button for lesson 2
+        if (lesson == 2) { 
             switch (currentSlide)
             {
             case 1:
@@ -179,14 +191,16 @@ void Biology::LoadSlide() // Function to load a specific slide
             }
         }
 
-        if (CheckButtonClicked(nextButton)) { // Check if nextButton is clicked
+        // Check if nextButton is clicked
+        if (CheckButtonClicked(nextButton)) {
 
-            if ((lesson == 1 && currentSlide == 4) || (lesson == 2 && currentSlide == 5)) // Check if last slide of lesson is reached
+            // Check if last slide of lesson is reached
+            if ((lesson == 1 && currentSlide == 4) || (lesson == 2 && currentSlide == 5)) 
             {
                 currentSlide = 1;
                 lesson = 0;
             }
-            currentSlide++; // Move to next slide
+            currentSlide++; 
         }
         StartLesson();
     }

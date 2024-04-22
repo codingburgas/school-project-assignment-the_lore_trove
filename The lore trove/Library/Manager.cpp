@@ -8,12 +8,15 @@ Manager* Manager::instance = nullptr;
 
 void Manager::Initizalize() {
 
+	//Initialize window
 	InitWindow(screenWidth, screenHeight, "game");
 	SetTargetFPS(60);
 	Start();
 }
 
 void Manager::Start() {
+
+	// Get instance for renderer, chemistry and math
 	renderer = Renderer::GetInstance();
 	chemistry = Chemistry::GetInstance();
 	math = Math::GetInstance();
@@ -24,7 +27,7 @@ void Manager::Start() {
 }
 
 void Manager::Update() {
-
+	// Call Update function
 	renderer->Update();
 }
 bool Manager::ShouldWindowClose() {
@@ -35,5 +38,6 @@ bool Manager::ShouldWindowClose() {
 void Manager::Close() {
 
 	shouldWindowClose = true;
+	// Unload textures
 	renderer->UnloadTextures();
 }

@@ -5,6 +5,7 @@
 Chemistry* Chemistry::instance = nullptr;
 Button chemistryButton;
 
+//Load chemistry's sprites
 void Chemistry::LoadTextures() {
 	electrolysisBefore = LoadTexture("../assets/electrolysisBefore.png");
 	electrolysisAfter = LoadTexture("../assets/electrolysisAfter.png");
@@ -23,6 +24,7 @@ void Chemistry::LoadTextures() {
 	litmusNaOH3 = LoadTexture("../assets/litmusNaOH3.png");
 }
 
+//Make the chemistry scenes change
 void Chemistry::SwitchScenes(std::string chemistryTheme) {
 	if (chemistryTheme == "Electrolysis") {
 		if (currentScene != 4) {
@@ -31,6 +33,7 @@ void Chemistry::SwitchScenes(std::string chemistryTheme) {
 			}
 		}
 
+		//Change electrolysis' scenes
 		switch (currentScene) {
 
 		case 1:
@@ -59,6 +62,7 @@ void Chemistry::SwitchScenes(std::string chemistryTheme) {
 			DrawTexture(endBackground, 0, 0, WHITE);
 			DrawTextEx(Renderer::GetInstance()->font, "Lesson finished!", { 700,500 }, 80, 5, BLACK);
 
+			//Return to the chemistry menu to choose an other lesson
 			chemistryButton.DrawButton(chemistryButton.backToLessons);
 
 			DrawTextEx(Renderer::GetInstance()->font, "Choose another lesson", { chemistryButton.backToLessons.x, chemistryButton.backToLessons.y }, 80, 5, BLACK);
@@ -68,6 +72,7 @@ void Chemistry::SwitchScenes(std::string chemistryTheme) {
 			}
 		}
 	}
+	//Change litmus' scenes
 	else if (chemistryTheme == "Litmus") {
 
 		if (currentScene != 7) {
@@ -126,6 +131,7 @@ void Chemistry::SwitchScenes(std::string chemistryTheme) {
 			break;
 		case 7:
 			DrawTexture(endBackground, 0, 0, WHITE);
+			//Return to the chemistry menu to choose an other lesson
 			chemistryButton.DrawButton(chemistryButton.backToLessons);
 			
 			DrawTextEx(Renderer::GetInstance()->font, "Lesson finished!", { 700,500 }, 80, 5, BLACK);

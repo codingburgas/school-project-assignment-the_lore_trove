@@ -10,6 +10,7 @@ public:
 
 	void DrawButton(Rectangle rect);
 
+	// Define Buttons
 	Rectangle mainMenuButtons[4] = {
 		{ 30,350,300,100 },
 		{ 30,450,300,100 },

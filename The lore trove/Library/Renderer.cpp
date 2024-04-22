@@ -10,7 +10,8 @@
 Renderer* Renderer::instance = nullptr;
 Button button;
 
-void Renderer::LoadTextures() { // Load all the textures from files
+// Load all the textures from files
+void Renderer::LoadTextures() { 
 
 	menuBackground = LoadTexture("../assets/mainMenuBackground.png");
 	subjectChoosingBackground = LoadTexture("../assets/chooseSubjectBackground.png");
@@ -38,20 +39,24 @@ void Renderer::LoadTextures() { // Load all the textures from files
 void Renderer::UnloadTextures()
 {
 	for (Texture2D& texture : biologyTextures) {
-		UnloadTexture(texture); // Unload textures
+
+		// Unload textures
+		UnloadTexture(texture); 
 	}
 }
 
+// Calculate center position based on screen size and object size
 int Renderer::CenterPosition(int offset, char axis, int offsetModifier) {
 	if (axis == 'X') return (GetScreenWidth() / 2) - (offset / 2) - offsetModifier;
 	return ((GetScreenHeight() / 2) - (offset / 2)) - offsetModifier;
-} // Calculate center position based on screen size and object size
+} 
 
 void Renderer::Update() {
 
 	BeginDrawing();
 	if (menu) {
-		if (main) {  // Render main menu options
+		// Render main menu options
+		if (main) {  
 			DrawTexture(menuBackground, 0, 0, WHITE);
 			DrawTextEx(font, "The lore trove", { 30, 150 }, 90, 5, WHITE);
 			DrawTextEx(font, "Play", { button.mainMenuButtons[0].x + 60, button.mainMenuButtons[0].y - 4 }, 70, 5, WHITE);
@@ -73,11 +78,13 @@ void Renderer::Update() {
 				main = false;
 			}
 			else if (button.IsClicked(button.mainMenuButtons[3])) {
+				// Close application
 				Manager::GetInstance()->Close();
-			} // Close application
+			} 
 		}
 		else if (info) {
-			ClearBackground(BLACK);  // Render information screen content
+			// Render information screen content
+			ClearBackground(BLACK);  
 			DrawTexture(ongoingLesson, 0, 0, WHITE);
 			DrawTexture(backButton, button.back.x, button.back.y, WHITE);
 			DrawTextEx(font, "The Lore Trove", { 700, 150 }, 80, 5, BLACK);
@@ -93,16 +100,10 @@ void Renderer::Update() {
 			if (button.IsClicked(button.back)) {
 				info = false;
 				main = true;
-			} //  Through its innovative approach to education, the game aims to motivate people 
-			//of all ages to explore the wonders of science and mathematics in a fun and interactive way.
-
-
-
-
-
-
+			} 
 		}
-		else if (credits) { // Shows the credits page
+		else if (credits) {
+			// Shows the credits page
 			ClearBackground(BLACK);
 			DrawTexture(ongoingLesson, 0, 0, WHITE);
 			DrawTexture(backButton, button.back.x, button.back.y, WHITE);
@@ -114,15 +115,18 @@ void Renderer::Update() {
 			DrawTextEx(font, "Pavlin Peev - 9th grade - Quality Assurance", { 420, 675 }, 50, 5, BLACK);
 			DrawTextEx(font, "Nikolay Kulov - 9th grade - Back-end Developer", { 400, 600 }, 50, 5, BLACK);
 
+			// Makes to go back in the main menu
 			if (button.IsClicked(button.back)) {
 				credits = false;
-				main = true; // Makes to go back in the main menu
+				main = true; 
 			}
 		}
 
 	}
 	else {
-		if (chooseSubject) { // Shows different options of different subject chosen
+
+		// Shows different options of different subject chosen
+		if (chooseSubject) { 
 			ClearBackground(WHITE);
 			DrawTexture(subjectChoosingBackground, 0, 0, WHITE);
 			if (button.IsClicked(button.subjects[0])) {
@@ -141,7 +145,8 @@ void Renderer::Update() {
 		}
 		else {
 			ClearBackground(WHITE);
-			if (subject == 0) { // Runs if subject == 0
+			// Runs if subject == 0
+			if (subject == 0) { 
 				Biology::GetInstance()->setTextures(biologyTextures);
 				DrawTexture(chooseLesson, 0, 0, WHITE);
 				DrawTexture(backButton, button.back.x, button.back.y, WHITE);
@@ -152,7 +157,8 @@ void Renderer::Update() {
 				Biology::GetInstance()->LoadSlide();
 
 			}
-			else if (subject == 1) { // Runs if subject == 1
+			// Runs if subject == 1
+			else if (subject == 1) { 
 				DrawTexture(chooseLesson, 0, 0, WHITE);
 				DrawTexture(backButton, button.back.x, button.back.y, WHITE);
 
@@ -170,7 +176,8 @@ void Renderer::Update() {
 					Math::GetInstance()->StartMathLesson();
 				}
 			}
-			else if (subject == 2) { // Runs if subject == 2
+			// Runs if subject == 2
+			else if (subject == 2) { 
 
 
 
