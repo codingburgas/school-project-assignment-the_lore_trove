@@ -45,10 +45,8 @@ void Math::LoadWhiteBoardSlides(std::string Theme) {
 			DrawRectangle(Renderer::GetInstance()->CenterPosition(1050, 'X'), Renderer::GetInstance()->CenterPosition(615, 'Y'), 1050, 615, WhiteBoardColor);
 
 			DrawText("Triangles", Renderer::GetInstance()->CenterPosition(1000, 'X'), Renderer::GetInstance()->CenterPosition(575, 'Y'), 30, WhiteBoardTextColor);
-			DrawText("They have three angles.", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(400, 'Y'), 25, WhiteBoardTextColor);
 			DrawText("Triangles are shapes that consist of three angles.", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(485, 'Y'), 25, WhiteBoardTextColor);
-			DrawText("They have three angles.", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(400, 'Y'), 25, WhiteBoardTextColor);
-			DrawText("They are divided into acute-angled, right-angled and obtuse-angled triangles:", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(315, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("They are divided into acute-angled, right-angled and obtuse-angled triangles:", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(400, 'Y'), 25, WhiteBoardTextColor);
 			break;
 
 		case 1:
@@ -57,9 +55,15 @@ void Math::LoadWhiteBoardSlides(std::string Theme) {
 
 			DrawText("Triangles", Renderer::GetInstance()->CenterPosition(1000, 'X'), Renderer::GetInstance()->CenterPosition(575, 'Y'), 30, WhiteBoardTextColor);
 			DrawText("First sign of equality of triangles: AB = A1B1, AC = A1C1", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(485, 'Y'), 25, WhiteBoardTextColor);
-			DrawText("Second sign of equality of two triangles:If a side and two angles of one triangle are respectively equal to a side and two angles of another triangle, then the two triangles are congruent.", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(400, 'Y'), 25, WhiteBoardTextColor);
-			DrawText("Third sign of equality of two triangles:If the sides of one triangle are correspondingly equal to the sides of another triangle, then the two triangles are congruent.", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(315, 'Y'), 25, WhiteBoardTextColor);
-			DrawText("Fourth sign of congruence of right triangles:If the leg and hypotenuse of a rectangle triangle are respectively equal to leg and hypotenuse of another right triangle, it the two triangles are congruent.", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(230, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("Second sign of equality of two triangles:If a side and two angles of one triangle", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(400, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("are respectively equal to a side and two angles of another triangle, then the ", Renderer::GetInstance()->CenterPosition(925, 'X'), Renderer::GetInstance()->CenterPosition(315, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("two triangles are congruent.", Renderer::GetInstance()->CenterPosition(925, 'X'), Renderer::GetInstance()->CenterPosition(230, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("Third sign of equality of two triangles: If the sides of one triangle are", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(145, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("respectively equal to the sides of another triangle, then the two triangles", Renderer::GetInstance()->CenterPosition(925, 'X'), Renderer::GetInstance()->CenterPosition(60, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("are congruent.", Renderer::GetInstance()->CenterPosition(925, 'X'), Renderer::GetInstance()->CenterPosition(-25, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("Fourth sign of congruence of right triangles:If the leg and hypotenuse of a", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(-110, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("rectangle triangle are respectively equal to leg and hypotenuse of another", Renderer::GetInstance()->CenterPosition(925, 'X'), Renderer::GetInstance()->CenterPosition(-195, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("right triangle, it the two triangles are congruent.", Renderer::GetInstance()->CenterPosition(925, 'X'), Renderer::GetInstance()->CenterPosition(-280, 'Y'), 25, WhiteBoardTextColor);
 			break;
 
 		case 2:
@@ -93,9 +97,10 @@ void Math::LoadWhiteBoardSlides(std::string Theme) {
 			DrawRectangle(Renderer::GetInstance()->CenterPosition(1050, 'X'), Renderer::GetInstance()->CenterPosition(615, 'Y'), 1050, 615, WhiteBoardColor);
 			DrawText("Circle", Renderer::GetInstance()->CenterPosition(1000, 'X'), Renderer::GetInstance()->CenterPosition(575, 'Y'), 30, WhiteBoardTextColor);
 			DrawText("What makes the circle:", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(485, 'Y'), 25, WhiteBoardTextColor);
-			DrawText("Radius – a segment whose one endpoint is at the center of a circular line and the second endpoint is on the circle itself.", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(400, 'Y'), 25, WhiteBoardTextColor);
-			DrawText("Chord – a segment whose endpoints lie on a circular line.", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(315, 'Y'), 25, WhiteBoardTextColor);
-			DrawText("Diameter – a chord that passes through the center of a circular line.", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(230, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("Radius – a segment whose one endpoint is at the center of a circular line and", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(400, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("the second endpoint is on the circle itself.", Renderer::GetInstance()->CenterPosition(925, 'X'), Renderer::GetInstance()->CenterPosition(315, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("Chord – a segment whose endpoints lie on a circular line.", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(230, 'Y'), 25, WhiteBoardTextColor);
+			DrawText("Diameter – a chord that passes through the center of a circular line.", Renderer::GetInstance()->CenterPosition(975, 'X'), Renderer::GetInstance()->CenterPosition(145, 'Y'), 25, WhiteBoardTextColor);
 			break;
 		case 1:
 			DrawRectangle(Renderer::GetInstance()->CenterPosition(1070, 'X'), Renderer::GetInstance()->CenterPosition(635, 'Y'), 1070, 635, WhiteBoardEdgesColor);
@@ -115,11 +120,11 @@ void Math::PickMathLesson() {
 		activeLesson = true;
 	}
 	else if (lessonButton.IsClicked(lessonButton.mathButtons[1])) {
-		lesson = "Rectangles";
+		lesson = "Circles";
 		activeLesson = true;
 	}
 	else if (lessonButton.IsClicked(lessonButton.mathButtons[2])) {
-		lesson = "Circles";
+		lesson = "Rectangles";
 		activeLesson = true;
 	}
 }

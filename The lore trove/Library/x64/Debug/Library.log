@@ -1,14 +1,14 @@
 ﻿  MathLesson.cpp
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(16,71): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(16,71): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
   (compiling source file '/MathLesson.cpp')
   
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(16,71): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(16,71): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   (compiling source file '/MathLesson.cpp')
   
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(16,121): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(16,121): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
   (compiling source file '/MathLesson.cpp')
   
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(16,121): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(16,121): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   (compiling source file '/MathLesson.cpp')
   
-  Library.vcxproj -> D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\x64\Debug\Library.lib
+  Library.vcxproj -> C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The lore trove\x64\Debug\Library.lib
