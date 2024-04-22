@@ -1,1 +1,12 @@
-﻿  Library.vcxproj -> C:\Users\Ivan-Mihail\Documents\school-project-assignment-the_lore_trove\The lore trove\x64\Debug\Library.lib
+﻿  Renderer.cpp
+C:\Users\user\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(76,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(76,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(86,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(86,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(125,55): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(125,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(135,55): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(135,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(150,55): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\Documents\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(150,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Library.vcxproj -> C:\Users\user\Documents\school-project-assignment-the_lore_trove\The lore trove\x64\Debug\Library.lib
