@@ -27,7 +27,6 @@ void Math::BoardEraser(Color ReplacementColor) {
 }
 
 void Math::LoadWhiteBoardSlides(std::string Theme) {
-	Font font = LoadFont("../assets/font/Itim-Regular.ttf");
 	Color WhiteBoardEdgesColor = Color{ 0, 0, 0, 255 };
 	Color WhiteBoardColor = Color{ 255, 255, 255, 255 };
 	Color WhiteBoardTextColor = Color{ 0, 0, 0, 255 };

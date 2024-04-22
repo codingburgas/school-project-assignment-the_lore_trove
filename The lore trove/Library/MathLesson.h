@@ -15,6 +15,8 @@ public:
 		return instance;
 	}
 
+	void LoadTextures();
+
 	void BoardEraser(Color replacementColor);
 
 	void LoadWhiteBoardSlides(std::string theme);
@@ -32,4 +34,6 @@ private:
 	int currentSlide = 0;
 
 	std::string lesson;
+
+	Texture2D buttons;
 };
