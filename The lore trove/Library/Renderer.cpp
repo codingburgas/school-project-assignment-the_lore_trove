@@ -78,7 +78,7 @@ void Renderer::Update() {
 		}
 		else if (info) {
 			ClearBackground(BLACK);  // Render information screen content
-			DrawRectangleRec({ 10,10,1900,1060 }, BEIGE);
+			DrawTexture(ongoingLesson, 0, 0, WHITE);
 			DrawTexture(backButton, button.back.x, button.back.y, WHITE);
 			DrawTextEx(font, "The Lore Trove", { 700, 150 }, 80, 5, BLACK);
 			DrawTextEx(font, "Welcome to The_Lore_Trove, an interesting and", { 350, 300 }, 50, 5, BLACK);
@@ -104,7 +104,7 @@ void Renderer::Update() {
 		}
 		else if (credits) { // Shows the credits page
 			ClearBackground(BLACK);
-			DrawRectangleRec({ 10,10,1900,1060 }, BEIGE);
+			DrawTexture(ongoingLesson, 0, 0, WHITE);
 			DrawTexture(backButton, button.back.x, button.back.y, WHITE);
 			DrawTextEx(font, "Hello, we are The Lore Trove and this is our team:", { 150, 180 }, 80, 5, BLACK);
 			DrawTextEx(font, "Nadezhda Ivanova - 10th grade - Scrum Trainer", { 400, 300 }, 50, 5, BLACK);
