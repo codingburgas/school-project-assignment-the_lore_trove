@@ -29,6 +29,12 @@ public:
 
 	Rectangle backToLessons = { 600,800,740,90 };
 
+	Rectangle mathButtons[3]{
+		{200,380,400,420},
+		{725,380,430,420},
+		{1280,380,450,400}
+	};
+
 private:
 	
 };

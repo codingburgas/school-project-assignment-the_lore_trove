@@ -3,7 +3,11 @@
 #include "MathLesson.h"
 
 Math* Math::instance = nullptr;
+Button lessonButton;
 
+void Math::LoadTextures() {
+	buttons = LoadTexture("../assets/mathLessonIcons.png");
+}
 void Math::BoardEraser(Color ReplacementColor) {
 	Color BoardEraserColor = Color{ 0, 49, 122, 255 };
 	Color BoardEraserShade = Color{ 1, 35, 87, 255 };
@@ -104,57 +108,23 @@ void Math::LoadWhiteBoardSlides(std::string Theme) {
 }
 
 void Math::PickMathLesson() {
-	DrawRectangle(Renderer::GetInstance()->CenterPosition(250, 'X', 300), Renderer::GetInstance()->CenterPosition(-125, 'Y'), 250, 125, BLACK);
-	Rectangle TriButton = { Renderer::GetInstance()->CenterPosition(200, 'X', 300), Renderer::GetInstance()->CenterPosition(-100, 'Y'), 200, 100 };
-	DrawRectangleRec(TriButton, RED);
-	DrawText("Triangles", Renderer::GetInstance()->CenterPosition(200, 'X', 275), Renderer::GetInstance()->CenterPosition(-100, 'Y', -25), 30, WHITE);
-
-	if (CheckCollisionPointRec(GetMousePosition(), TriButton)) {
-		DrawRectangle(Renderer::GetInstance()->CenterPosition(250, 'X', 300), Renderer::GetInstance()->CenterPosition(-125, 'Y'), 250, 125, MAROON);
-		DrawRectangleRec(TriButton, RED);
-		DrawText("Triangles", Renderer::GetInstance()->CenterPosition(200, 'X', 275), Renderer::GetInstance()->CenterPosition(-100, 'Y', -25), 30, WHITE);
-
-		if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
-			lesson = "Triangles";
-			activeLesson = true;
-		}
+	currentSlide = 0;
+	DrawTexture(buttons, 0, 0, WHITE);
+	if (lessonButton.IsClicked(lessonButton.mathButtons[0])) {
+		lesson = "Triangles";
+		activeLesson = true;
 	}
-
-	DrawRectangle(Renderer::GetInstance()->CenterPosition(250, 'X'), Renderer::GetInstance()->CenterPosition(-125, 'Y'), 250, 125, BLACK);
-	Rectangle CirButton = { Renderer::GetInstance()->CenterPosition(200, 'X'), Renderer::GetInstance()->CenterPosition(-100, 'Y'), 200, 100 };
-	DrawRectangleRec(CirButton, GREEN);
-	DrawText("Circles", Renderer::GetInstance()->CenterPosition(200, 'X', -25), Renderer::GetInstance()->CenterPosition(-100, 'Y', -25), 30, WHITE);
-
-	if (CheckCollisionPointRec(GetMousePosition(), CirButton)) {
-		DrawRectangle(Renderer::GetInstance()->CenterPosition(250, 'X'), Renderer::GetInstance()->CenterPosition(-125, 'Y'), 250, 125, DARKGREEN);
-		DrawRectangleRec(CirButton, GREEN);
-		DrawText("Circles", Renderer::GetInstance()->CenterPosition(200, 'X', -25), Renderer::GetInstance()->CenterPosition(-100, 'Y', -25), 30, WHITE);
-
-		if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
-			lesson = "Circles";
-			activeLesson = true;
-		}
+	else if (lessonButton.IsClicked(lessonButton.mathButtons[1])) {
+		lesson = "Rectangles";
+		activeLesson = true;
 	}
-
-	DrawRectangle(Renderer::GetInstance()->CenterPosition(250, 'X', -300), Renderer::GetInstance()->CenterPosition(-125, 'Y'), 250, 125, BLACK);
-	Rectangle RecButton = { Renderer::GetInstance()->CenterPosition(200, 'X', -300), Renderer::GetInstance()->CenterPosition(-100, 'Y'), 200, 100 };
-	DrawRectangleRec(RecButton, BLUE);
-	DrawText("Rectangles", Renderer::GetInstance()->CenterPosition(200, 'X', -325), Renderer::GetInstance()->CenterPosition(-100, 'Y', -25), 30, WHITE);
-
-	if (CheckCollisionPointRec(GetMousePosition(), RecButton)) {
-		DrawRectangle(Renderer::GetInstance()->CenterPosition(250, 'X', -300), Renderer::GetInstance()->CenterPosition(-125, 'Y'), 250, 125, DARKBLUE);
-		DrawRectangleRec(RecButton, BLUE);
-		DrawText("Rectangles", Renderer::GetInstance()->CenterPosition(200, 'X', -325), Renderer::GetInstance()->CenterPosition(-100, 'Y', -25), 30, WHITE);
-
-		if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
-			lesson = "Rectangles";
-			activeLesson = true;
-		}
+	else if (lessonButton.IsClicked(lessonButton.mathButtons[2])) {
+		lesson = "Circles";
+		activeLesson = true;
 	}
 }
 
 void Math::StartMathLesson() {
-
 	LoadWhiteBoardSlides(lesson);
 	BoardEraser(BLACK);
 }

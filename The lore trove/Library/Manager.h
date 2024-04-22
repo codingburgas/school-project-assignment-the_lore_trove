@@ -34,4 +34,6 @@ private:
     Renderer* renderer;
 
     Chemistry* chemistry;
+
+    Math* math;
 };

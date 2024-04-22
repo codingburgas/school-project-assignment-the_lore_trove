@@ -136,6 +136,7 @@ void Renderer::Update() {
 
 				if (button.IsClicked(button.back)) {
 					chooseSubject = true;
+					Math::GetInstance()->activeLesson = false;
 				}
 
 				if (!Math::GetInstance()->activeLesson) {

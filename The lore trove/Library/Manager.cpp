@@ -16,9 +16,11 @@ void Manager::Initizalize() {
 void Manager::Start() {
 	renderer = Renderer::GetInstance();
 	chemistry = Chemistry::GetInstance();
+	math = Math::GetInstance();
 
 	renderer->LoadTextures();
 	chemistry->LoadTextures();
+	math->LoadTextures();
 }
 
 void Manager::Update() {

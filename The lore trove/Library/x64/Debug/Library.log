@@ -1,93 +1,14 @@
-﻿  pch.cpp
-  Biology.cpp
-  Button.cpp
-  ChemistryLesson.cpp
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\ChemistryLesson.cpp(110,159): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/ChemistryLesson.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\ChemistryLesson.cpp(110,111): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/ChemistryLesson.cpp')
-  
-  MathLesson.cpp
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(12,71): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+﻿  MathLesson.cpp
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(16,71): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
   (compiling source file '/MathLesson.cpp')
   
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(12,71): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(16,71): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   (compiling source file '/MathLesson.cpp')
   
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(12,121): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(16,121): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
   (compiling source file '/MathLesson.cpp')
   
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(12,121): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(16,121): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   (compiling source file '/MathLesson.cpp')
   
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(109,65): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-  (compiling source file '/MathLesson.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(109,65): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-  (compiling source file '/MathLesson.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(109,121): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-  (compiling source file '/MathLesson.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(109,121): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-  (compiling source file '/MathLesson.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(125,65): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-  (compiling source file '/MathLesson.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(125,65): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-  (compiling source file '/MathLesson.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(125,116): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-  (compiling source file '/MathLesson.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(125,116): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-  (compiling source file '/MathLesson.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(141,65): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-  (compiling source file '/MathLesson.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(141,65): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-  (compiling source file '/MathLesson.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(141,122): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-  (compiling source file '/MathLesson.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\MathLesson.cpp(141,122): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-  (compiling source file '/MathLesson.cpp')
-  
-  Renderer.cpp
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(76,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/Renderer.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(76,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/Renderer.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(86,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/Renderer.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(86,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/Renderer.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(125,55): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/Renderer.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(125,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/Renderer.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(135,55): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/Renderer.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(135,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/Renderer.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(160,55): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/Renderer.cpp')
-  
-D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\Library\Renderer.cpp(160,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  (compiling source file '/Renderer.cpp')
-  
-  Manager.cpp
-  Generating Code...
   Library.vcxproj -> D:\School\Programming\Projects\school-project-assignment-the_lore_trove\The lore trove\x64\Debug\Library.lib
