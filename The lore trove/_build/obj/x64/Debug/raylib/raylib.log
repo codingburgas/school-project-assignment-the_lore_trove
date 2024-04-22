@@ -1,46 +1,19 @@
 ﻿  raudio.c
-C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoa.h(325,20): warning C4018: '<': signed/unsigned mismatch
-  (compiling source file '../raylib-master/src/raudio.c')
-  
-C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoa.h(338,42): warning C4018: '<': signed/unsigned mismatch
-  (compiling source file '../raylib-master/src/raudio.c')
-  
-C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoa.h(340,21): warning C4018: '<': signed/unsigned mismatch
-  (compiling source file '../raylib-master/src/raudio.c')
-  
-C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoa.h(425,20): warning C4018: '<': signed/unsigned mismatch
-  (compiling source file '../raylib-master/src/raudio.c')
-  
-C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoa.h(448,42): warning C4018: '<': signed/unsigned mismatch
-  (compiling source file '../raylib-master/src/raudio.c')
-  
-C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoa.h(523,14): warning C4018: '>': signed/unsigned mismatch
-  (compiling source file '../raylib-master/src/raudio.c')
-  
-C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoa.h(651,15): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file '../raylib-master/src/raudio.c')
-  
-C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoaplay.c(93,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file '../raylib-master/src/raudio.c')
-  
-C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoaplay.c(184,46): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
-  (compiling source file '../raylib-master/src/raudio.c')
-  
-C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoaplay.c(233,27): warning C4018: '<': signed/unsigned mismatch
-  (compiling source file '../raylib-master/src/raudio.c')
-  
-C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoaplay.c(235,73): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  (compiling source file '../raylib-master/src/raudio.c')
-  
-C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoaplay.c(268,15): warning C4018: '>': signed/unsigned mismatch
-  (compiling source file '../raylib-master/src/raudio.c')
-  
-C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\jar_xm.h(242,1): warning C4005: 'DEBUG': macro redefinition
-  (compiling source file '../raylib-master/src/raudio.c')
-  C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\jar_xm.h(242,1):
-  'DEBUG' previously declared on the command line
-  
-C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\raudio.c(1290,53): warning C4090: 'function': different 'const' qualifiers
+D:\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoa.h(325,20): warning C4018: '<': signed/unsigned mismatch
+D:\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoa.h(338,42): warning C4018: '<': signed/unsigned mismatch
+D:\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoa.h(340,21): warning C4018: '<': signed/unsigned mismatch
+D:\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoa.h(425,20): warning C4018: '<': signed/unsigned mismatch
+D:\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoa.h(448,42): warning C4018: '<': signed/unsigned mismatch
+D:\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoa.h(523,14): warning C4018: '>': signed/unsigned mismatch
+D:\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoa.h(651,20): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoaplay.c(93,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoaplay.c(184,51): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+D:\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoaplay.c(233,27): warning C4018: '<': signed/unsigned mismatch
+D:\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoaplay.c(235,73): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\qoaplay.c(268,15): warning C4018: '>': signed/unsigned mismatch
+D:\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\external\jar_xm.h(242,1): warning C4005: 'DEBUG': macro redefinition
+D:\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\raudio.c : message : see previous definition of 'DEBUG'
+D:\school-project-assignment-the_lore_trove\The lore trove\raylib-master\src\raudio.c(1290,53): warning C4090: 'function': different 'const' qualifiers
   rcore.c
   rglfw.c
   rmodels.c
@@ -49,4 +22,4 @@ C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The l
   rtextures.c
   utils.c
   Generating Code...
-  raylib.vcxproj -> C:\Users\Ivan-Mihail\source\repos\school-project-assignment-the_lore_trove\The lore trove\_bin\Debug\raylib.lib
+  raylib.vcxproj -> D:\school-project-assignment-the_lore_trove\The lore trove\_bin\Debug\raylib.lib
